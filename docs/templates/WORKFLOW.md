@@ -11,6 +11,9 @@
 ## 0. Sebelum mulai (pahami dulu)
 
 - Baca `docs/PROMPT.md` (identitas & target) dan `docs/CONTEXT.md` (konteks).
+- **Template pendukung (biar tidak riset ulang)**: `docs/templates/RESEARCH.md` (riset brand),
+  `DESIGN.md` (palet + kontras WCAG AA), `COPY-STYLE.md` (tone & copy), `OPENCODE.md`
+  (scraping agent), `scripts/contrast-check.js` (hitung kontras), `scripts/make-raw-audit.js` (Excel).
 - Pastikan tahu: stack (Next.js 14 static export + Tailwind v3 + motion), struktur folder, alur data.
 - Cek versi dependency di `package.json` sebelum menambah library baru.
 
@@ -24,12 +27,16 @@
 > scraping (OpenCode/Claude/Codebuff).
 
 ### langkah 1a — Riset brand & peta toko
+- **Ikuti checklist `docs/templates/RESEARCH.md`** — sekali jalan, output terstruktur
+  (identitas, peta toko, produk contoh, warna, tone) → tidak perlu riset ulang.
 - Identifikasi brand dari link yang dikirim user (Shopee/Tokopedia/Lazada/TikTok/IG).
 - Catat: nama brand, tagline, jenis produk, tiap username/akun resmi + link (nanti masuk
   sheet "Sumber" di Excel dan `docs/research/`).
 - Cari contoh produk via Google (snippet harga/produk) kalau PDP anti-bot.
 - Simpan hasil riset ke `docs/research/{{slug}}-{{YYYY-MM-DD}}.md` (contoh:
   `docs/research/mismi-2026-09-09.md`), lalu isi token `{{TOKEN}}` di PROMPT.md / CONTEXT.md.
+- Turunan riset: palet → `docs/research/{{slug}}-palette-tone.md` (dari DESIGN.md),
+  tone → `docs/research/{{slug}}-copy-style.md` (dari COPY-STYLE.md).
 
 ### langkah 1b — Kumpulkan data mentah per marketplace → `data/raw/`
 - Untuk tiap marketplace yang bisa diakses, simpan koleksi sebagai `data/raw/{{marketplace}}.json`
@@ -101,6 +108,8 @@ node scripts/make-{{slug}}-audit.js  # → tulis xlsx final (di-ignore git via *
 ## 2. Retheme Palet Warna (ganti tema)
 
 > Berlaku untuk: ganti warna brand, perbaiki kontras, atau sesuaikan arah estetika baru.
+> **Gunakan `docs/templates/DESIGN.md`** (cara pilih warna dari riset) dan hitung kontras
+> dengan `docs/templates/scripts/contrast-check.js` — JANGAN hitung manual.
 
 ### langkah 2a — Token warna (WAJIB sinkron 2 tempat)
 - `app/globals.css` `:root` token + `tailwind.config.js` `tokens` → nilainya HARUS sama.
@@ -160,6 +169,8 @@ Buka hasil di browser → cek visual hero, kartu, panel gelap, tombol, footer, s
 
 > Berlaku: brand lama body care → baru minuman/skincare/fashion/dll. Ini bagian paling besar.
 > Bukan hanya ganti nama — kategori, klaim, ukuran, dan bahasa copy semuanya berbeda.
+> **Tone & copy pakai `docs/templates/COPY-STYLE.md`** (framework riset voice + glossary + do/don'ts)
+> supaya copy baru relevan dan konsisten tanpa riset gaya bahasa dari nol.
 
 ### langkah 4a — Kategori
 - `lib/products.js`: `CATEGORY_LABELS`, `MEGA_MENU`.
