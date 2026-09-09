@@ -57,6 +57,32 @@ docs/templates/OPENCODE.md (agent scraping)
 - `nexttodo.md` — task list terjemahan ID → EN (tone Korean-girl)
 - `docs/templates/` — template project baru (RESEARCH, DESIGN, COPY-STYLE, OPENCODE, script Excel/kontras)
 
+## Deploy ke Vercel
+
+Repo sudah siap build (`npm run build` OK, static export ke `out/`).
+
+1. Buka **vercel.com/new** → **Import Git Repository** → pilih `ZCrafters/MismiDemo`.
+2. Vercel auto-detect **Next.js**: Framework Preset `Next.js`, Build `next build`,
+   Output `out/` — biarkan default, klik **Deploy**.
+3. Kalau proyeknya **sudah pernah di-import** (dan gagal/404): buka project → tab
+   **Deployments** → **Redeploy** dari commit terbaru.
+4. **Auto-deploy**: setiap `git push` ke `main` otomatis memicu deployment baru.
+
+> ℹ️ **Tidak perlu `vercel.json`.** Project ini Next.js static export — Vercel
+> mendeteksi framework, menjalankan `next build`, dan menyajikan `out/` secara
+> otomatis. Menambah `vercel.json` justru bisa menimpa preset Next.js bawaan.
+
+### Custom domain
+1. Project → **Settings** → **Domains** → tambahkan domain (cth `mismi.my.id`).
+2. Ikuti verifikasi DNS sesuai instruksi Vercel: **A/ALIAS** ke `76.76.21.21`,
+   **CNAME** ke `cname.vercel-dns.com`, atau arahkan **NS** ke Vercel (managed DNS).
+3. Tunggu propagasi (beberapa menit–24 jam) → aktifkan HTTPS otomatis.
+
+### Cek lokal sebelum push
+```bash
+npm run build && npm run smoke   # build hijau + semua route 200
+```
+
 ## Verifikasi akhir (checklist)
 
 - [ ] `npm run validate` → `OK 14 produk (8 hero), 3 kategori.`
