@@ -10,16 +10,16 @@ import {
 // disesuaikan katalog Mismi): search ringkas + grup Kategori, Promo &
 // Kupon, Best Seller & Terbaru, Wishlist & Bantuan.
 const QUICK = [
-  { href: "/catalog?sale=1", icon: TagIcon, title: "Promo", desc: "Diskon & harga spesial" },
-  { href: "/catalog?sort=sold", icon: StarIcon, title: "Best Seller", desc: "Paling laris diburu" },
-  { href: "/catalog?sort=new", icon: ClockIcon, title: "Terbaru", desc: "Produk baru datang" },
-  { href: "/#kupon", icon: GiftIcon, title: "Kupon", desc: "Voucher buat kamu" },
+  { href: "/catalog?sale=1", icon: TagIcon, title: "Promo", desc: "Deals & special prices" },
+  { href: "/catalog?sort=sold", icon: StarIcon, title: "Best Sellers", desc: "The most-loved picks" },
+  { href: "/catalog?sort=new", icon: ClockIcon, title: "New In", desc: "Fresh arrivals" },
+  { href: "/#kupon", icon: GiftIcon, title: "Coupons", desc: "Vouchers just for you" },
 ];
 
 const HELP = [
-  { href: "/wishlist", icon: HeartIcon, title: "Wishlist", desc: "Produk yang kamu simpan" },
-  { href: "/faq", icon: ShieldIcon, title: "FAQ & Bantuan", desc: "Jawaban cepat" },
-  { href: "/about", icon: GridIcon, title: "Tentang Mismi", desc: "Kenalan dengan brand" },
+  { href: "/wishlist", icon: HeartIcon, title: "Wishlist", desc: "Items you’ve saved" },
+  { href: "/faq", icon: ShieldIcon, title: "FAQ & Help", desc: "Quick answers" },
+  { href: "/about", icon: GridIcon, title: "About Mismi", desc: "Get to know the brand" },
 ];
 
 function MenuRow({ href, icon: Ic, title, desc, onClose }) {
@@ -46,24 +46,24 @@ export function MobileNav() {
       </button>
       <div className={`mobile-nav${open ? " open" : ""}`} aria-hidden={!open}>
         <div className="search-scrim" onClick={close} />
-        <div className="mobile-panel" role="dialog" aria-label="Menu navigasi">
+        <div className="mobile-panel" role="dialog" aria-label="Navigation menu">
           <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
             <strong>mismi.</strong>
-            <button className="icon-btn" aria-label="Tutup menu" onClick={close}>
+            <button className="icon-btn" aria-label="Close menu" onClick={close}>
               <CloseIcon />
             </button>
           </div>
 
           <form className="mnav-search" action="/catalog" method="get" role="search" onSubmit={close}>
             <SearchIcon size={18} aria-hidden="true" />
-            <input type="search" name="q" placeholder="Cari: tas selempang, ransel, tote bag…" aria-label="Cari produk" autoComplete="off" />
+            <input type="search" name="q" placeholder="Search: sling bags, ransel, tote bags…" aria-label="Search products" autoComplete="off" />
           </form>
 
-          <p className="mnav-label">Belanja</p>
-          <MenuRow href="/catalog" icon={GridIcon} title="Semua Produk" desc="Jelajahi seluruh katalog" onClose={close} />
+          <p className="mnav-label">Shop</p>
+          <MenuRow href="/catalog" icon={GridIcon} title="All Products" desc="Browse the whole catalog" onClose={close} />
           {QUICK.map((m) => <MenuRow key={m.title} {...m} onClose={close} />)}
 
-          <p className="mnav-label">Kategori</p>
+          <p className="mnav-label">Categories</p>
           {allCategories.map((c) => (
             <a key={c} href={`/catalog?cat=${c}`} className="mnav-cat" onClick={close}>
               {categoryLabel(c)}
@@ -71,7 +71,7 @@ export function MobileNav() {
             </a>
           ))}
 
-          <p className="mnav-label">Akun &amp; Bantuan</p>
+          <p className="mnav-label">Account &amp; Help</p>
           {HELP.map((m) => <MenuRow key={m.title} {...m} onClose={close} />)}
 
           <div className="mobile-panel-footer">

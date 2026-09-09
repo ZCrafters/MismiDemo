@@ -1,5 +1,24 @@
-# CHANGELOG — Suur Lemoen Demo
+# CHANGELOG — Mismi Demo
 
+## 2026-09-09 — Migrasi Suur Lemoen → Mismi (Pinky Girl Fashion)
+- **Brand**: seluruh teks "Suur Lemoen"/"lemon" diganti "Mismi" (metadata, JSON-LD, header,
+  footer, home, PDP, about, faq, checkout, kupon, placeholder search, localStorage keys,
+  hashtag `#MoveEasyBeMismi`). Slogan: tas wanita cantik & stylish ala Korea — move easy, be Mismi.
+- **Palet baru "Pinky Girl"**: bg `#fff5f9`, ink `#3a1230`, primary berry `#b4135e`,
+  aksen hot pink `#d61380` (accent-ink putih), accent-dark `#a6125c` untuk teks link,
+  glow pink `#ffe6f0 → #fff0f6 → #fff7fb`. Hardcode (ritual-panel, grid-fade, shadow, Spotlight,
+  grep avatar review) diselaraskan; semua pasangan teks lolos WCAG AA (accent/white 4.92, muted 7.18, dll).
+- **Produk**: katalog baru `data/products.mismi.json` (14 SKU, 8 hero) dikurasi dari Excel mentah
+  `mismi/mismi-data-mentah.xlsx` (Shopee `mismi.official`, Tokopedia `mismiofficial`, Lazada `mismi-bags`)
+  — tas selempang, tote bag & ransel korean style. Gambar asli masih placeholder (kolom URL gambar
+  di Excel belum terisi) ⇒ `npm run curate` setelah user lengkapi.
+- **Kategori**: 3 kategori (tas-selempang/tote-bag/tas-ransel) menggantikan 8 kategori lemon wellness.
+- **Kupon**: `MISMI10`, `ONGKIRGRATIS`, `BARUMISMI`, `PINKGIRL` (display) + `MISMI10`/`BARUMISMI`
+  (berlaku di checkout). Order ID prefix `MSM-`.
+- **Pipeline**: `scripts/curate-mismi.js` (Excel→JSON + dedupe + hero), `validate-mismi.js`, `make-mismi-audit.js`;
+  `package.json` + `next.config.mjs` (output export, remotePatterns marketplace) dipulihkan; `npm install`.
+
+## Riwayat (arsip Suur Lemoen)
 ## 2026-09-09 — Migrasi Brighty → Suur Lemoen
 - **Brand**: seluruh teks "Brighty" diganti "Suur Lemoen" (metadata, header, footer, home, PDP,
   about, faq, checkout, kupon, placeholder search, JSON-LD, hashtag `#SehatDenganLemon`).

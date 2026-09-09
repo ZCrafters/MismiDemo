@@ -1,36 +1,40 @@
-# SUUR LEMOEN — Demo Minuman Sehat (Context)
+# MISMI — Demo Tas Wanita (Context)
 
-> Brand: **Suur Lemoen** — minuman kesehatan & pangan alami berbasis lemon (clean eating):
-> sari lemon & nipis, cuka apel/nanas/naga/kurma, madu, minyak zaitun, superfood, teh herbal, bundle.
+> Brand: **Mismi** — brand tas wanita asal Indonesia bergaya Korean-style: tas selempang,
+> tote bag & ransel (korduroi, motif bunga, checker, water resistant). Gaya manis untuk
+> crush, perjalanan & hari-hari cantik — move easy, be Mismi.
 > Sifat: demo edukasi + portofolio. **Bukan** afiliasi resmi; harga provisional mengikuti official store.
 
 ## Data & sumber
-- Katalog `data/products.suurlemoen.json` (26 SKU, 8 hero id 1-8) dikurasi dari halaman produk
-  **official store Tokopedia `suurlemoenid`** (diambil 2026-09-09). Shopee/Lazada/TikTok terblokir
-  anti-bot; data harga/gambar diambil dari PDP Tokopedia.
-- Tiap SKU menyimpan `sourceUrl` ke listing resmi + URL gambar asli (juga dicatat di Excel audit).
-- Audit: `suurlemoen/suurlemoen-katalog-audit.xlsx` (sheet Katalog + Ringkasan, kolom URL gambar)
-  ← `npm run audit` (`scripts/make-suurlemoen-audit.js`, exceljs).
-- Validasi: `scripts/validate-suurlemoen.js` (slug/id unik, harga>0, gambar https, kategori ada,
-  hero id 1-8).
+- Katalog `data/products.mismi.json` (14 SKU, 8 hero id 1-8) dikurasi dari Excel mentah
+  `mismi/mismi-data-mentah.xlsx` (sheet Katalog-shopee / Katalog-tokopedia / Katalog-lazada)
+  dari official store: **Shopee `mismi.official` (342985281)**, **Tokopedia `mismiofficial`/`mismi`**,
+  **Lazada `mismi-bags`**, plus sosial TikTok `@mismi.id` & Instagram `@mismi.official`
+  (diambil 2026-09-09; anti-bot — data diambil dari snippet yang bisa diakses).
+- Tiap SKU menyimpan `sourceUrl` ke listing resmi; kolom `URL gambar` di Excel masih kosong
+  → gambar saat ini placeholder lokal (`/placeholder-bag.svg`) sampai user melengkapi.
+- Kurasi: `npm run curate` (`scripts/curate-mismi.js`, exceljs) — baca Excel → dedupe →
+  `data/products.mismi.json` + laporan produk yang masih perlu harga/gambar.
+- Audit: `npm run audit` (`scripts/make-mismi-audit.js`) → `mismi/mismi-katalog-audit.xlsx`.
+- Validasi: `npm run validate` (`scripts/validate-mismi.js`) — slug/id unik, harga>0,
+  gambar valid, kategori ada, hero id 1-8. Audit mentah: `npm run audit:raw`.
 
 ## Skema SKU (engine-compatible)
 `{ id, slug, name, category, categoryLabel, pack, sizes:[], colors:[], price, originalPrice,
-   discountPercent, bpom, claim, images[], source:"suur-lemoen-official", provisional, heroFlag,
+   discountPercent, bpom, claim, images[], source:"mismi-official", provisional, heroFlag,
    newTag, rating, soldCount, soldLabel, sourceUrl }`
-- `sizes`/`colors` kosong → PDP tidak memaksa pilih varian; ukuran kemasan (250ml/500ml/1L/700gr) = nama SKU.
-- `bpom` nomor registrasi; `claim` ringkasan klaim dari listing resmi (max 300 char).
+- `sizes`/`colors` kosong → PDP tidak memaksa pilih varian; nama model (cth: mismi-hazel-bag) = SKU.
+- `bpom` kosong (produk fashion) → blok BPOM otomatis tidak tampil di PDP.
 - `rating`/`soldCount`/`soldLabel` dari listing real; `0`/kosong → fallback enrichment deterministik di `lib/products.js`.
 
 ## Kategori & label
-`sari-lemon` Sari Lemon & Nipis · `cuka-apel` Cuka Apel · `cuka-buah` Cuka Buah ·
-`madu` Madu Murni · `minyak-zaitun` Minyak Zaitun · `superfood` Superfood & Camilan ·
-`teh-herbal` Teh & Latte Herbal · `bundle` Paket Hemat → map label di `lib/products.js` (`CATEGORY_LABELS`).
+`tas-selempang` Tas Selempang · `tote-bag` Tote Bag · `tas-ransel` Tas Ransel
+→ map label di `lib/products.js` (`CATEGORY_LABELS`, `MEGA_MENU`, `Header SHORT_LABEL`, `HomeSections CATS`).
 
 ## Design tokens (app/globals.css)
-Palet "Lemon Segar + Hijau Daun": bg `#fdf9e9`, ink `#26331a`, primary hijau daun `#47730d`,
-aksen emas lemon `#f2c11b` (accent-ink gelap `#26331a` untuk teks di atasnya), accent-dark amber
-`#92610a` untuk teks link, glow `#f8efcd → #fcf6e2 → #fefaf0`. Font Outfit + Cabinet Grotesk.
+Palet "Pinky Girl": bg `#fff5f9`, ink `#3a1230`, primary berry raspberry `#b4135e`,
+aksen hot pink `#d61380` (accent-ink putih `#ffffff` untuk teks di atasnya), accent-dark
+`#a6125c` untuk teks link, glow pink `#ffe6f0 → #fff0f6 → #fff7fb`. Font Outfit + Cabinet Grotesk.
 
 ## Stack & komponen utama
 - Next.js 14 (static export) + Tailwind v3 (utility layer, preflight OFF, token = palet di atas)
@@ -41,4 +45,5 @@ aksen emas lemon `#f2c11b` (accent-ink gelap `#26331a` untuk teks di atasnya), a
 - Header ala Sociolla: strip promo + countdown global + search lebar + pill kategori.
 
 ## Git/GitHub
-Project ini **tanpa git** (riwayat & remote GitHub dihapus sesuai keputusan user saat migrasi).
+Project per 2026-09-09 **tanpa git** (riwayat & remote dihapus). `.gitignore` mengabaikan
+`node_modules/ out/ .next/ *.xlsx .env* dist/`.
