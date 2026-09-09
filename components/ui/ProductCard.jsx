@@ -8,7 +8,7 @@ const DOT = { Black: "#1c1917", White: "#ffffff", Cream: "#f3ead9", Ivory: "#fff
 export function Rating({ value, reviews, size = 14 }) {
   const full = Math.round(value);
   return (
-    <span className="rating" aria-label={`Rating ${value.toFixed(1)} dari 5, ${reviews} ulasan`}>
+    <span className="rating" aria-label={`Rating ${value.toFixed(1)} out of 5, ${reviews} reviews`}>
       <span className="stars" aria-hidden="true">
         {[1, 2, 3, 4, 5].map((i) => <StarIcon key={i} size={size} filled={i <= full} />)}
       </span>
@@ -23,7 +23,7 @@ export function Rating({ value, reviews, size = 14 }) {
 export function ProductCard({ p }) {
   const stock = p.stock || { type: "available" };
   const stockLabel =
-    stock.type === "out" ? "Stok Habis" : stock.type === "low" ? `Tersisa ${stock.qty}` : "Masih Tersedia";
+    stock.type === "out" ? "Sold out" : stock.type === "low" ? `Only ${stock.qty} left` : "In stock";
   return (
     <a className="card group" href={`/produk/${p.slug}`}>
       <span className="card-img">

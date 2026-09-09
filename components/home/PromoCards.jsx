@@ -6,12 +6,12 @@ import { Spotlight, SpotLightItem } from "../ui/Spotlight";
 // (tidak mengarang angka diskon; harga promo nyata ada di katalog/PDP).
 
 const PROMOS = [
-  { t: "Harga promo official store", d: "Listing resmi marketplace, s&k berlaku", href: "/catalog?sort=price-asc", tone: "pink" },
-  { t: "Sling bag favorit", d: "Korean style, korduroi & water resistant", href: "/catalog?cat=tas-selempang", tone: "blue" },
-  { t: "Terlaris minggu ini", d: "Paling banyak diborong pecinta tas", href: "/catalog?sort=sold", tone: "sand" },
-  { t: "New launch", d: "Model terbaru Mismi", href: "/catalog?sort=new", tone: "pink" },
-  { t: "Ransel & tote andalan", d: "Untuk sekolah, kerja & jalan-jalan", href: "/catalog?cat=tas-ransel", tone: "blue" },
-  { t: "Info & promo rutin", d: "Daftar newsletter di halaman bawah", href: "/about", tone: "sand" },
+  { t: "Official store promo prices", d: "Live marketplace listings, T&Cs apply", href: "/catalog?sort=price-asc", tone: "pink" },
+  { t: "Best-selling women’s bags", d: "Most loved, most wanted", href: "/catalog?sort=sold", tone: "blue" },
+  { t: "Trending this week", d: "Sling bags everyone is eyeing", href: "/catalog?sort=sold", tone: "sand" },
+  { t: "New Korean-style drops", d: "Fresh backpacks & totes from Mismi", href: "/catalog?sort=new", tone: "pink" },
+  { t: "Slings & backpacks to love", d: "Cute designs, friendly prices", href: "/catalog?cat=tas-selempang", tone: "blue" },
+  { t: "News & regular promos", d: "Join the newsletter down below", href: "/about", tone: "sand" },
 ];
 
 const TONE = {

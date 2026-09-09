@@ -20,16 +20,16 @@ export function CouponStrip() {
   const copy = async (code) => {
     try {
       await navigator.clipboard.writeText(code);
-      toast(`Kode tersalin: ${code}`);
+      toast(`Code copied: ${code}`);
     } catch {
-      toast(`Kode: ${code}`);
+      toast(`Code: ${code}`);
     }
   };
   return (
-    <section aria-label="Kupon & voucher" id="kupon" className="mt-2 scroll-mt-32">
+    <section aria-label="Coupons &amp; vouchers" id="kupon" className="mt-2 scroll-mt-32">
       <div className="section-head">
         <div>
-          <h2>Kupon Buat Kamu</h2>
+          <h2>Coupons Just for You</h2>
           <p className="meta" style={{ margin: "2px 0 0" }}>Geser untuk lihat semua · ilustrasi, voucher asli di official store.</p>
         </div>
         <a href="/catalog?sale=1">Lihat promo →</a>

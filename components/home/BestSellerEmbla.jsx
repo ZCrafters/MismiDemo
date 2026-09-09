@@ -33,10 +33,10 @@ export function BestSellerEmbla({ items }) {
     "grid h-11 w-11 place-items-center rounded-full border border-line bg-surface text-ink transition hover:bg-bg disabled:opacity-40 disabled:hover:bg-surface";
 
   return (
-    <section aria-label="Best seller">
+    <section aria-label="Best sellers">
       <div className="section-head">
-        <h2>Best Seller</h2>
-        <a href="/catalog?sort=sold">Lihat semua →</a>
+        <h2>Best Sellers</h2>
+        <a href="/catalog?sort=sold">View all →</a>
       </div>
       <Carousel options={{ align: "start", loop: false }} plugins={plugins}>
         <SliderContainer viewportClassName="bleed" className="bleed-inset">
@@ -53,10 +53,10 @@ export function BestSellerEmbla({ items }) {
           <SliderDotButton />
           <div className="flex items-center gap-2">
             <SliderSnapDisplay className="mr-1 text-sm font-bold tabular-nums text-ink" />
-            <SliderPrevButton className={arrowCls} aria-label="Geser ke kiri">
+            <SliderPrevButton className={arrowCls} aria-label="Scroll left">
               <ChevronLeftIcon size={18} />
             </SliderPrevButton>
-            <SliderNextButton className={arrowCls} aria-label="Geser ke kanan">
+            <SliderNextButton className={arrowCls} aria-label="Scroll right">
               <ChevronRightIcon size={18} />
             </SliderNextButton>
           </div>

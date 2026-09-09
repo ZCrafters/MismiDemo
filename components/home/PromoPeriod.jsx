@@ -7,23 +7,23 @@ export function PromoPeriod() {
   if (!promoProducts.length) return null;
   return (
     <section aria-label="Promo" id="promo" style={{ marginTop: 36 }}>
-      <a className="promo-frame" href="/catalog?sort=price-asc" aria-label="Harga promo resmi, lihat katalog">
-        <span className="promo-frame-title">HARGA PROMO OFFICIAL STORE</span>
-        <span className="promo-frame-date">Periode promo — s&amp;k berlaku</span>
-        <span className="promo-frame-note">Harga tertera adalah harga listing resmi Mismi di marketplace.</span>
+      <a className="promo-frame" href="/catalog?sort=price-asc" aria-label="Official promo prices, see catalog">
+        <span className="promo-frame-title">OFFICIAL STORE PROMO PRICES</span>
+        <span className="promo-frame-date">Promo period — T&amp;Cs apply</span>
+        <span className="promo-frame-note">Prices shown are Mismi's live official store listings.</span>
       </a>
-      <div className="pills" role="navigation" aria-label="Tab promo">
-        <a className="pill" href="#promo" aria-current="page">Harga Promo</a>
-        <a className="pill" href="/catalog?sort=sold">Terlaris</a>
-        <a className="pill" href="/catalog?sort=new">New Launch</a>
-        <a className="pill" href="/catalog?sort=price-asc">Termurah</a>
+      <div className="pills" role="navigation" aria-label="Promo tabs">
+        <a className="pill" href="#promo" aria-current="page">Promo Prices</a>
+        <a className="pill" href="/catalog?sort=sold">Best Sellers</a>
+        <a className="pill" href="/catalog?sort=new">New In</a>
+        <a className="pill" href="/catalog?sort=price-asc">Lowest Price</a>
       </div>
       <div className="section-head">
         <div>
-          <h2>Sedang Promo</h2>
-          <p className="meta" style={{ margin: "2px 0 0" }}>Harga promo resmi official store — dapat berubah.</p>
+          <h2>On Sale</h2>
+          <p className="meta" style={{ margin: "2px 0 0" }}>Official store promo prices — can change anytime.</p>
         </div>
-        <a href="/catalog">Lihat semua →</a>
+        <a href="/catalog">View all →</a>
       </div>
       <Reveal className="grid grid-5" staggerChildren>
         {promoProducts.map((p) => <ProductCard key={p.slug} p={p} />)}

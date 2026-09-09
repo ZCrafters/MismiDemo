@@ -1,6 +1,7 @@
 /** @type {import('next').NextConfig} */
+// Catatan: tanpa output:"export" — Vercel menjalankan Next.js native; semua route
+// tetap SSG via generateStaticParams (statis, tanpa fungsi server tambahan).
 const nextConfig = {
-  output: "export",
   images: {
     unoptimized: true,
     remotePatterns: [

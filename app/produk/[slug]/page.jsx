@@ -10,6 +10,9 @@ export function generateStaticParams() {
   return products.map((p) => ({ slug: p.slug }));
 }
 
+// Slug di luar katalog → 404 statis (tidak render di request-time).
+export const dynamicParams = false;
+
 export function generateMetadata({ params }) {
   const p = getProduct(params.slug);
   return {

@@ -13,24 +13,24 @@ import { products } from "../../lib/products";
 const STEPS = [
   {
     no: "01",
-    title: "Sling Bag",
-    desc: "Tas kecil untuk hangout & commute — muat HP, ringan, manis dipakai.",
+    title: "Pick Your Style",
+    desc: "Slings for daily, totes for roomy days, backpacks for school & work.",
     cat: "tas-selempang",
-    cta: "Lihat Sling Bag",
+    cta: "Shop Sling Bags",
   },
   {
     no: "02",
-    title: "Backpack",
-    desc: "Ransel untuk sekolah, kerja & perjalanan — muat banyak, tetap stylish.",
-    cat: "tas-ransel",
-    cta: "Lihat Ransel",
+    title: "Play with Shades",
+    desc: "Choose corduroy, flower or checker to match your OOTD.",
+    cat: "tote-bag",
+    cta: "Shop Tote Bags",
   },
   {
     no: "03",
-    title: "Tote Bag",
-    desc: "Tas jinjing simpel yang menemani hari-harimu — dari belanja sampai kantor.",
-    cat: "tote-bag",
-    cta: "Lihat Tote Bag",
+    title: "Ready to Go",
+    desc: "Water-repellent & fits everything — from campus to weekend trips.",
+    cat: "tas-ransel",
+    cta: "Shop Backpacks",
   },
 ];
 
@@ -49,16 +49,16 @@ export function RitualSticky() {
   }));
 
   return (
-    <section ref={ref} aria-label="Gaya Mismi" className="ritual">
+    <section ref={ref} aria-label="Your daily style with Mismi" className="ritual">
       <motion.div
         style={reduce ? undefined : { scale: scale1, rotate: rotate1 }}
         className="ritual-sticky"
       >
         <div className="bg-grid-fade" aria-hidden="true" />
-        <p className="kicker">GAYA MISMI · 3 PILIHAN</p>
-        <h2>Tiga gaya, tiap hari.</h2>
-        <p>Padu padan tas Mismi yang simpel — scroll untuk lihat rangkaiannya.</p>
-        <a className="btn" href="/catalog">Mulai dari Katalog →</a>
+        <p className="kicker">YOUR MISMI · 3 PICKS</p>
+        <h2>Three styles, every day.</h2>
+        <p>Simple, easy Mismi pairings — scroll to see the whole range.</p>
+        <a className="btn" href="/catalog">Start from the catalog →</a>
       </motion.div>
 
       <motion.div
@@ -66,7 +66,7 @@ export function RitualSticky() {
         className="ritual-panel"
       >
         <div className="bg-grid-fade-dark" aria-hidden="true" />
-        <h2>Rangkaian yang saling melengkapi</h2>
+        <h2>Pieces that go together</h2>
         <div className="ritual-steps">
           {steps.map((s) => (
             <a key={s.no} className="ritual-step" href={`/catalog?cat=${s.cat}`}>

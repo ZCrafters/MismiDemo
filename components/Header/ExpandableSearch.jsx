@@ -39,12 +39,12 @@ export function ExpandableSearch() {
 
   return (
     <>
-      <button className="icon-btn" aria-label="Cari produk" aria-expanded={open} onClick={() => setOpen(true)}>
+      <button className="icon-btn" aria-label="Search products" aria-expanded={open} onClick={() => setOpen(true)}>
         <SearchIcon />
       </button>
       <div className={`search-overlay${open ? " open" : ""}`} aria-hidden={!open}>
         <div className="search-scrim" onClick={() => setOpen(false)} />
-        <div className="search-panel" role="dialog" aria-label="Pencarian produk">
+        <div className="search-panel" role="dialog" aria-label="Search products">
           <div className="search-panel-inner">
             <form className="search-form" onSubmit={(e) => { e.preventDefault(); submit(); }} role="search">
               <input
@@ -53,16 +53,16 @@ export function ExpandableSearch() {
                 value={q}
                 onChange={(e) => setQ(e.target.value)}
                 placeholder="Cari: tas selempang, ransel, tote bag…"
-                aria-label="Cari produk"
+                aria-label="Search products"
                 autoComplete="off"
                 tabIndex={open ? 0 : -1}
               />
-              <button className="icon-btn" type="button" aria-label="Tutup pencarian" onClick={() => setOpen(false)}>
+              <button className="icon-btn" type="button" aria-label="Close search" onClick={() => setOpen(false)}>
                 <CloseIcon />
               </button>
             </form>
             {q.trim().length >= 1 && suggestions.length > 0 && (
-              <div className="search-suggest" role="listbox" aria-label="Saran produk">
+              <div className="search-suggest" role="listbox" aria-label="Product suggestions">
                 {suggestions.map((s) => (
                   <button key={s.slug} type="button" className="suggest-row" onClick={() => submit(s.name)}>
                     <SearchIcon size={16} />
@@ -75,8 +75,8 @@ export function ExpandableSearch() {
             {q.trim().length === 0 && (
               <>
                 {recent.length > 0 && (
-                  <div className="search-recent" aria-label="Pencarian terakhir">
-                    <p className="search-panel-label">Pencarian terakhir</p>
+                  <div className="search-recent" aria-label="Recent searches">
+                    <p className="search-panel-label">Recent searches</p>
                     <div className="pills">
                       {recent.map((t) => (
                         <button key={t} className="pill" type="button" onClick={() => submit(t)}>
@@ -86,8 +86,8 @@ export function ExpandableSearch() {
                     </div>
                   </div>
                 )}
-                <div className="pills" aria-label="Pencarian populer">
-                  <p className="search-panel-label" style={{ width: "100%" }}>Pencarian populer</p>
+                <div className="pills" aria-label="Popular searches">
+                  <p className="search-panel-label" style={{ width: "100%" }}>Popular searches</p>
                   {HINTS.map((t) => (
                     <button key={t} className="pill" type="button" onClick={() => submit(t)}>{t}</button>
                   ))}

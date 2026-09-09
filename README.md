@@ -18,11 +18,16 @@ Demo edukasi + portofolio toko online **Mismi** — tas wanita lokal Indonesia
 ```bash
 npm install          # pasang dependency (next, motion, embla, exceljs, ...)
 npm run dev          # dev server → http://localhost:3000
-npm run build        # static export → folder out/
-npm run preview      # serve hasil static (http-server)
+npm run build        # build Next.js (semua route SSG)
+npm run start        # serve hasil build (next start)
+npm run preview      # alias dari next start
 npm run lint         # eslint
-npm run smoke        # smoke test semua route dari out/ (scripts/smoke-test.mjs)
+npm run smoke        # smoke test semua route via next start (scripts/smoke-test.mjs)
 ```
+
+> Mode: **Next.js native (tanpa `output: "export"`)** — semua route di-prerender SSG
+> via `generateStaticParams`, jadi tetap statis tapi Vercel men-serve-nya dengan benar
+> (halaman HTML tidak 404 seperti mode export).
 
 ## Pipeline data
 
@@ -62,15 +67,16 @@ docs/templates/OPENCODE.md (agent scraping)
 Repo sudah siap build (`npm run build` OK, static export ke `out/`).
 
 1. Buka **vercel.com/new** → **Import Git Repository** → pilih `ZCrafters/MismiDemo`.
-2. Vercel auto-detect **Next.js**: Framework Preset `Next.js`, Build `next build`,
-   Output `out/` — biarkan default, klik **Deploy**.
+2. Vercel auto-detect **Next.js**: Framework Preset `Next.js`, Build `next build` —
+   biarkan default, klik **Deploy**. (Tanpa `output: "export"` — Vercel menangani
+   route statis dengan benar; project yang sudah ter-deploy tinggal Redeploy.)
 3. Kalau proyeknya **sudah pernah di-import** (dan gagal/404): buka project → tab
    **Deployments** → **Redeploy** dari commit terbaru.
 4. **Auto-deploy**: setiap `git push` ke `main` otomatis memicu deployment baru.
 
-> ℹ️ **Tidak perlu `vercel.json`.** Project ini Next.js static export — Vercel
-> mendeteksi framework, menjalankan `next build`, dan menyajikan `out/` secara
-> otomatis. Menambah `vercel.json` justru bisa menimpa preset Next.js bawaan.
+> ℹ️ **Tidak perlu `vercel.json`.** Project ini Next.js native (semua route SSG) —
+> Vercel mendeteksi framework & menjalankan `next build` otomatis. Menambah
+> `vercel.json` justru bisa menimpa preset Next.js bawaan.
 
 ### Custom domain
 1. Project → **Settings** → **Domains** → tambahkan domain (cth `mismi.my.id`).

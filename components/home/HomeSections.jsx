@@ -5,15 +5,15 @@ import { Reveal } from "../motion/Reveal";
 import { Spotlight, SpotLightItem } from "../ui/Spotlight";
 
 const CATS = [
-  { slug: "tas-selempang", label: "Tas Selempang" },
-  { slug: "tas-ransel", label: "Tas Ransel" },
-  { slug: "tote-bag", label: "Tote Bag" },
+  { slug: "tas-selempang", label: "Sling Bags" },
+  { slug: "tote-bag", label: "Tote Bags" },
+  { slug: "tas-ransel", label: "Backpacks" },
 ];
 
 export function CategoryGrid() {
   return (
-    <section aria-label="Kategori">
-      <div className="section-head"><h2>Belanja per Kategori</h2><a href="/catalog">Lihat semua →</a></div>
+    <section aria-label="Categories">
+      <div className="section-head"><h2>Shop by Category</h2><a href="/catalog">View all →</a></div>
       <Reveal staggerChildren>
         <Spotlight className="cat-grid" ProximitySpotlight CursorFlowGradient>
           {CATS.map((c) => {
@@ -35,8 +35,8 @@ export function CategoryGrid() {
 
 export function NewArrivals({ items }) {
   return (
-    <section aria-label="New arrivals">
-      <div className="section-head"><h2>New Arrivals</h2><a href="/catalog?sort=new">Lihat semua →</a></div>
+    <section aria-label="New in">
+      <div className="section-head"><h2>New In</h2><a href="/catalog?sort=new">View all →</a></div>
       <Reveal className="grid" staggerChildren>
         {items.map((p) => <ProductCard key={p.slug} p={p} />)}
       </Reveal>

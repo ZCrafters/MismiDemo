@@ -6,6 +6,9 @@ export function generateStaticParams() {
   return [...new Set(products.map((p) => p.category))].map((slug) => ({ slug }));
 }
 
+// Slug di luar kategori → 404 statis (tidak render di request-time).
+export const dynamicParams = false;
+
 export default function Category({ params }) {
   const list = products.filter((p) => p.category === params.slug);
   return (

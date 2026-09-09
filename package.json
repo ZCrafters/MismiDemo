@@ -12,7 +12,8 @@
     "audit": "node scripts/make-mismi-audit.js",
     "audit:raw": "node scripts/make-mismi-raw-audit.js",
     "curate": "node scripts/curate-mismi.js",
-    "preview": "npx --yes http-server out -c-1"
+    "preview": "next start",
+    "smoke": "node scripts/smoke-test.mjs"
   },
   "dependencies": {
     "animejs": "^4.5.0",

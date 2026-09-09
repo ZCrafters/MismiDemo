@@ -10,14 +10,14 @@ import { ChevronLeftIcon, ChevronRightIcon } from "../ui/Icons";
 
 const SLIDES = [
   {
-    kicker: "TAS WANITA KOREAN-STYLE · OFFICIAL MISMI",
-    title: "Cantik, ringan, buat tiap hari.",
-    text: "Tas selempang, ransel & tote bag dengan desain manis — dari commute sampai hangout.",
-    cta: "Belanja Sekarang",
+    kicker: "KOREAN STYLE EVERY DAY · OFFICIAL MISMI",
+    title: "Cute bags for your everyday mood ♡",
+    text: "Slings, totes & backpacks with a Korean touch — lovely fabrics, friendly prices, easy to mix and match.",
+    cta: "Shop now",
     href: "/catalog",
     // Satu produk representatif per kategori (bukan 3 varian sama) supaya foto match copy-nya.
     pick: (ps) => {
-      const cats = ["tas-selempang", "tas-ransel", "tote-bag"];
+      const cats = ["tas-selempang", "tote-bag", "tas-ransel"];
       const list = cats
         .map((c) => ps.find((p) => p.category === c && p.heroFlag) || ps.find((p) => p.category === c))
         .filter(Boolean);
@@ -25,24 +25,24 @@ const SLIDES = [
     },
   },
   {
-    kicker: "SLING BAG FAVORIT",
-    title: "Tas kecil, kepribadian besar.",
-    text: "Sling bag korduroi & water resistant — muat HP, ringan, cocok buat gaya harian.",
-    cta: "Lihat Sling Bag",
-    href: "/catalog?cat=tas-selempang",
+    kicker: "BEST SELLERS",
+    title: "Our sling bags, adored.",
+    text: "Hazel, Wendy & Fera — water-repellent, fits everything, and the cutest little designs.",
+    cta: "Shop best sellers",
+    href: "/catalog?sort=sold",
     pick: (ps) => {
       const list = ps.filter((p) => p.category === "tas-selempang").slice(0, 3);
       return list.length ? list : ps.filter((p) => p.heroFlag).slice(0, 3);
     },
   },
   {
-    kicker: "BACKPACK & TOTE",
-    title: "Sekolah, kerja, jalan-jalan.",
-    text: "Ransel & tote yang muat banyak tapi tetap stylish — harga resmi official store.",
-    cta: "Lihat Ransel & Tote",
+    kicker: "NEW IN",
+    title: "Korean backpacks, ready to go.",
+    text: "Jasmine, Miranda & Xana — flower prints, laptop-ready, for school & weekend trips.",
+    cta: "Shop backpacks",
     href: "/catalog?cat=tas-ransel",
     pick: (ps) => {
-      const list = ps.filter((p) => p.category === "tas-ransel" || p.category === "tote-bag").slice(0, 3);
+      const list = ps.filter((p) => p.category === "tas-ransel").slice(0, 3);
       return list.length ? list : ps.filter((p) => p.heroFlag).slice(0, 3);
     },
   },
@@ -70,7 +70,7 @@ export function HeroCarousel() {
   return (
     <section
       className="hero-banner glow-hero hero-carousel"
-      aria-label="Koleksi unggulan"
+      aria-label="Featured collection"
       aria-roledescription="carousel"
       onPointerEnter={() => setPaused(true)}
       onPointerLeave={() => setPaused(false)}
@@ -99,7 +99,7 @@ export function HeroCarousel() {
       <button
         type="button"
         className="hero-arrow hero-arrow-prev"
-        aria-label="Slide sebelumnya"
+        aria-label="Previous slide"
         onClick={() => go(idx - 1)}
       >
         <ChevronLeftIcon size={20} />
@@ -107,12 +107,12 @@ export function HeroCarousel() {
       <button
         type="button"
         className="hero-arrow hero-arrow-next"
-        aria-label="Slide berikutnya"
+        aria-label="Next slide"
         onClick={() => go(idx + 1)}
       >
         <ChevronRightIcon size={20} />
       </button>
-      <div className="hero-dots" role="tablist" aria-label="Pilih slide">
+      <div className="hero-dots" role="tablist" aria-label="Choose a slide">
         {SLIDES.map((s, i) => (
           <button
             key={s.kicker}
