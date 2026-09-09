@@ -1,0 +1,14 @@
+{
+  "name": "suur-lemoen-demo",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "validate": "node scripts/validate-suurlemoen.js",
+    "audit": "node scripts/make-suurlemoen-audit.js",
+    "audit:raw": "node scripts/make-mismi-raw-audit.js"
+  },
+  "dependencies": {
+    "exceljs": "^4.4.0"
+  }
+}
