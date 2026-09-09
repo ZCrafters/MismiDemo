@@ -6,15 +6,18 @@
 > Sifat: demo edukasi + portofolio. **Bukan** afiliasi resmi; harga provisional mengikuti official store.
 
 ## Data & sumber
-- Katalog `data/products.mismi.json` (14 SKU, 8 hero id 1-8) dikurasi dari Excel mentah
-  `mismi/mismi-data-mentah.xlsx` (sheet Katalog-shopee / Katalog-tokopedia / Katalog-lazada)
-  dari official store: **Shopee `mismi.official` (342985281)**, **Tokopedia `mismiofficial`/`mismi`**,
-  **Lazada `mismi-bags`**, plus sosial TikTok `@mismi.id` & Instagram `@mismi.official`
-  (diambil 2026-09-09; anti-bot — data diambil dari snippet yang bisa diakses).
-- Tiap SKU menyimpan `sourceUrl` ke listing resmi; kolom `URL gambar` di Excel masih kosong
-  → gambar saat ini placeholder lokal (`/placeholder-bag.svg`) sampai user melengkapi.
-- Kurasi: `npm run curate` (`scripts/curate-mismi.js`, exceljs) — baca Excel → dedupe →
-  `data/products.mismi.json` + laporan produk yang masih perlu harga/gambar.
+- Katalog `data/products.mismi.json` (30 SKU, 8 hero id 1-8) dikurasi dari `mismi-products.json`
+  (root project) — hasil scrape resmi Lazada `mismi-bags` (gambar) + Tokopedia `mismi` (atribut,
+  untuk 3 produk yang match di kedua platform; URL gambar Tokopedia diabaikan karena bertanda
+  tangan/kedaluwarsa ~3 jam).
+- Tiap SKU menyimpan `sourceUrl` ke listing Lazada resmi; `images[]` berisi URL nyata
+  `img.lazcdn.com` (bukan lagi placeholder lokal).
+- Kurasi: `npm run import:mismi` (`scripts/import-mismi-real.js`) — baca `mismi-products.json`
+  → mapping nama/kategori/klaim kuratif (English, "Korean girl" tone) + harga/rating/sold/gambar
+  langsung dari sumber → `data/products.mismi.json`. Hero (badge "Best Seller", id 1-8) dipilih
+  dari jumlah terjual nyata tertinggi.
+- Generator lama berbasis Excel (`npm run curate`, `scripts/curate-mismi.js`) masih ada untuk
+  referensi tapi sudah tidak dipakai untuk katalog aktif.
 - Audit: `npm run audit` (`scripts/make-mismi-audit.js`) → `mismi/mismi-katalog-audit.xlsx`.
 - Validasi: `npm run validate` (`scripts/validate-mismi.js`) — slug/id unik, harga>0,
   gambar valid, kategori ada, hero id 1-8. Audit mentah: `npm run audit:raw`.
@@ -22,14 +25,18 @@
 ## Skema SKU (engine-compatible)
 `{ id, slug, name, category, categoryLabel, pack, sizes:[], colors:[], price, originalPrice,
    discountPercent, bpom, claim, images[], source:"mismi-official", provisional, heroFlag,
-   newTag, rating, soldCount, soldLabel, sourceUrl }`
-- `sizes`/`colors` kosong → PDP tidak memaksa pilih varian; nama model (cth: mismi-hazel-bag) = SKU.
+   newTag, rating, soldCount, soldLabel, reviewCount, sourceUrl }`
+- `sizes` kosong → PDP tidak memaksa pilih varian; `colors` diisi dari varian "Warna" nyata
+  (di-translate ke Inggris bila cocok, cth: Hitam→Black) untuk swatch di PDP/ProductCard.
 - `bpom` kosong (produk fashion) → blok BPOM otomatis tidak tampil di PDP.
-- `rating`/`soldCount`/`soldLabel` dari listing real; `0`/kosong → fallback enrichment deterministik di `lib/products.js`.
+- `rating`/`reviewCount`/`soldLabel` dari listing real (Lazada, fallback Tokopedia untuk 3 SKU
+  yang match kedua platform); kosong/null → fallback enrichment deterministik di `lib/products.js`.
 
 ## Kategori & label
-`tas-selempang` Tas Selempang · `tote-bag` Tote Bag · `tas-ransel` Tas Ransel
-→ map label di `lib/products.js` (`CATEGORY_LABELS`, `MEGA_MENU`, `Header SHORT_LABEL`, `HomeSections CATS`).
+`tas-selempang` Sling Bags · `tote-bag` Tote Bags · `tas-ransel` Backpacks ·
+`aksesoris-tas` Bag Charms (gantungan kunci) · `sekolah-kantor` School & Office (kotak pensil)
+→ map label di `lib/products.js` (`CATEGORY_LABELS`) dan `components/Header/Header.jsx` (`SHORT_LABEL`).
+`HomeSections CATS`/`MEGA_MENU`/`HeroCarousel` sengaja hanya menampilkan 3 kategori tas utama.
 
 ## Design tokens (app/globals.css)
 Palet "Pinky Girl": bg `#fff5f9`, ink `#3a1230`, primary berry raspberry `#b4135e`,

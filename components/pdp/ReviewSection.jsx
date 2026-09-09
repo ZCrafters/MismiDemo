@@ -2,9 +2,9 @@ import { Rating } from "../ui/ProductCard";
 import { StarIcon } from "../ui/Icons";
 
 const DUMMY_REVIEWS = [
-  { name: "Ayu K.", initial: "A", color: "#a6125c", days: 12, title: "Adorable sling bag!", body: "Mismi Hazel is my absolute fave. Water-repellent, fits everything, and the soft pink works with every outfit. Fast shipping, tidy packing.", verified: true },
-  { name: "Dinda M.", initial: "D", color: "#b4135e", days: 27, title: "The corduroy tote is a win", body: "Hills Tote's bear print is too cute. Thick fabric, neat stitching — perfect for campus and weekend trips. The promo price is super reasonable too.", verified: true },
-  { name: "Rani P.", initial: "R", color: "#3a1230", days: 41, title: "My go-to Korean backpack", body: "Mismi Jasmine is genuinely Korean-look. Fits my laptop and books, comfy straps, and the design is so unique my friends keep asking about it.", verified: false },
+  { name: "Ayu K.", initial: "A", color: "#a6125c", days: 12, title: "Adorable sling bag!", body: "This one is my absolute fave. Water-repellent, fits everything, and the soft colorway works with every outfit. Fast shipping, tidy packing.", verified: true },
+  { name: "Dinda M.", initial: "D", color: "#b4135e", days: 27, title: "The corduroy tote is a win", body: "The bear print is too cute. Thick fabric, neat stitching — perfect for campus and weekend trips. The promo price is super reasonable too.", verified: true },
+  { name: "Rani P.", initial: "R", color: "#3a1230", days: 41, title: "My go-to Korean backpack", body: "Genuinely Korean-look. Fits my laptop and books, comfy straps, and the design is so unique my friends keep asking about it.", verified: false },
 ];
 
 export function ReviewSection({ product }) {

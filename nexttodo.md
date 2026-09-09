@@ -125,9 +125,8 @@ Researched from real K-fashion/K-beauty brands (Chuu, rom&nd, Etude, MARHEN.J):
 - [ ] `components/checkout/CheckoutFlow.jsx` — valid coupons: translate labels, keep codes (`MISMI15`, `CHERRY10`, …)
 
 ### 10. Product data copy
-- [ ] `data/products.mismi.json` — translate `name` and `claim` to English (keep variant codes like `- 31H`, prices, images, sourceUrl, category slugs). Example:
-  - ID: `Mismi Fera Bag Tas Selempang Wanita Korea Tali Serut Dumpling Sling Bag Perempuan Stylish - 50F`
-  - EN: `Mismi Fera Bag – Korean Dumpling Drawstring Sling Bag – Stylish - 50F`
+- [x] `data/products.mismi.json` — `name`/`claim` are already English (done as part of the
+  `mismi-products.json` real-data import, see `docs/CONTEXT.md`). Nothing left to translate here.
 
 ### 11. Share & hashtag
 - [ ] `components/pdp/Share.jsx` + footer — hashtag → `#MoveEasyBeMismi`
@@ -163,7 +162,9 @@ Researched from real K-fashion/K-beauty brands (Chuu, rom&nd, Etude, MARHEN.J):
 2. **Build**: `npm run build` → exit 0, static export OK.
 3. **Smoke test** routes from `out/`: `/`, `/catalog`, `/kategori/*`, `/produk/*`, `/about`, `/faq`, `/wishlist`, `/checkout`, `/sitemap.xml`.
 4. **Tone check**: read hero + PDP aloud — does it sound like a cute Korean brand speaking English, not a translator?
-5. **Keep data intact**: `data/products.mismi.json` — only `name`/`claim` changed; ids, slugs, prices, images, sourceUrl untouched.
+5. **Keep data intact**: `data/products.mismi.json` now holds real Lazada/Tokopedia data (30 SKU,
+   imported via `npm run import:mismi` from `mismi-products.json` — see `docs/CONTEXT.md`). Names
+   and claims are already English; only touch copy elsewhere, don't regenerate this file.
 
 ---
 

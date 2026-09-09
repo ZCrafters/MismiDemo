@@ -14,6 +14,8 @@ const SHORT_LABEL = {
   "tas-ransel": "Backpacks",
   "tote-bag": "Tote Bags",
   "tas-selempang": "Sling Bags",
+  "aksesoris-tas": "Bag Charms",
+  "sekolah-kantor": "School & Office",
 };
 
 function WishlistButton() {

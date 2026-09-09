@@ -27,7 +27,7 @@ const SLIDES = [
   {
     kicker: "BEST SELLERS",
     title: "Our sling bags, adored.",
-    text: "Hazel, Wendy & Fera — water-repellent, fits everything, and the cutest little designs.",
+    text: "Carol, Vida & Xora — water-repellent, fits everything, and the cutest little designs.",
     cta: "Shop best sellers",
     href: "/catalog?sort=sold",
     pick: (ps) => {
@@ -38,7 +38,7 @@ const SLIDES = [
   {
     kicker: "NEW IN",
     title: "Korean backpacks, ready to go.",
-    text: "Jasmine, Miranda & Xana — flower prints, laptop-ready, for school & weekend trips.",
+    text: "Ursule, Kyra & Aria — flower prints, laptop-ready, for school & weekend trips.",
     cta: "Shop backpacks",
     href: "/catalog?cat=tas-ransel",
     pick: (ps) => {

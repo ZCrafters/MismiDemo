@@ -12,6 +12,7 @@
     "audit": "node scripts/make-mismi-audit.js",
     "audit:raw": "node scripts/make-mismi-raw-audit.js",
     "curate": "node scripts/curate-mismi.js",
+    "import:mismi": "node scripts/import-mismi-real.js",
     "preview": "next start",
     "smoke": "node scripts/smoke-test.mjs"
   },
