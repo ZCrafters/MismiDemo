@@ -1,8 +1,8 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
 
-// Kursor kustom (reimplementasi manual efek ala Cursify MCP): dot raspberry +
-// halo lembut mengikuti pointer dengan lerp (requestAnimationFrame).
+// Custom cursor (manual reimplementation of the Cursify-MCP-style effect): raspberry dot +
+// soft halo following the pointer with lerp (requestAnimationFrame).
 // Halo membesar di elemen interaktif (a/button/input), mode "drag" untuk
 // area carousel ([data-cursor="drag"]). Otomatis nonaktif di perangkat touch
 // (pointer: coarse) dan prefers-reduced-motion.

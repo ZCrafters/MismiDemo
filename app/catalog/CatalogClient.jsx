@@ -70,31 +70,31 @@ export default function CatalogClient() {
           {sizes.map((s) => <input key={s} type="hidden" name="size" value={s} />)}
           <input type="hidden" name="sort" value={sort} />
           <input id="catalog-search" name="q" type="search" defaultValue={q}
-            placeholder="Cari: tas selempang, ransel, tote bag…" aria-label="Cari produk" />
+            placeholder="Search: sling bags, backpacks, tote bags…" aria-label="Search products" />
         </form>
         <div className="plp-bar">
           <FilterBottomSheet current={current} count={activeFilters} />
-          <span className="count" role="status">{list.length} produk</span>
-          <span className="view-toggle" role="group" aria-label="Tampilan">
-            <a href={`/catalog/${q ? `?q=${q}&` : "?"}view=grid`} aria-current={view === "grid" || undefined} aria-label="Tampilan grid"><GridIcon size={18} /></a>
-            <a href={`/catalog/${q ? `?q=${q}&` : "?"}view=list`} aria-current={view === "list" || undefined} aria-label="Tampilan daftar"><ListIcon size={18} /></a>
+          <span className="count" role="status">{list.length} products</span>
+          <span className="view-toggle" role="group" aria-label="View">
+            <a href={`/catalog/${q ? `?q=${q}&` : "?"}view=grid`} aria-current={view === "grid" || undefined} aria-label="Grid view"><GridIcon size={18} /></a>
+            <a href={`/catalog/${q ? `?q=${q}&` : "?"}view=list`} aria-current={view === "list" || undefined} aria-label="List view"><ListIcon size={18} /></a>
           </span>
           <span style={{ marginLeft: "auto" }}><SortDropdown current={current} /></span>
         </div>
-        {max ? <p className="meta">Harga maks: {rupiah(max)} · <a href="/catalog/">reset</a></p> : null}
+        {max ? <p className="meta">Max price: {rupiah(max)} · <a href="/catalog/">reset</a></p> : null}
         {shown.length ? (
           view === "list"
-            ? <section className="rows" aria-label="Produk">{shown.map((p) => <ProductRow key={p.slug} p={p} />)}</section>
-            : <section className="grid" aria-label="Produk">{shown.map((p) => <ProductCard key={p.slug} p={p} />)}</section>
+            ? <section className="rows" aria-label="Products">{shown.map((p) => <ProductRow key={p.slug} p={p} />)}</section>
+            : <section className="grid" aria-label="Products">{shown.map((p) => <ProductCard key={p.slug} p={p} />)}</section>
         ) : (
           <div className="empty-cart">
-            <strong>Tidak ada hasil.</strong>
-            <p className="meta">Coba kata kunci atau filter lain.</p>
-            <a className="btn" href="/catalog/">Reset filter</a>
+            <strong>No results found.</strong>
+            <p className="meta">Try a different keyword or filter.</p>
+            <a className="btn" href="/catalog/">Reset filters</a>
           </div>
         )}
         {shown.length < list.length && (
-          <p style={{ marginTop: 16 }}><button className="btn btn-outline" type="button" onClick={() => setPage((p) => p + 1)}>Muat lagi ({list.length - shown.length} sisa) →</button></p>
+          <p style={{ marginTop: 16 }}><button className="btn btn-outline" type="button" onClick={() => setPage((p) => p + 1)}>Load more ({list.length - shown.length} sisa) →</button></p>
         )}
       </div>
     </div>

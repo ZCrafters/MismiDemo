@@ -5,10 +5,10 @@ import { motion, useReducedMotion, useScroll, useTransform } from "motion/react"
 import { useRef } from "react";
 import { products } from "../../lib/products";
 
-// Diadaptasi dari ui-layouts `sticky-scroll` (MIT): section pin 2 viewport —
-// panel headline sticky menyusut saat panel pink meluncur menutupinya.
-// Tema Glow Mismi + foto produk katalog asli. Hormati reduced-motion
-// (render statis tanpa transform).
+// Adapted from ui-layouts `sticky-scroll` (MIT): 2-viewport pinned section —
+// sticky headline panel shrinks as the pink panel slides over it.
+// Mismi Glow theme + real catalog product photos. Respects reduced-motion
+// (renders static without transforms).
 
 const STEPS = [
   {

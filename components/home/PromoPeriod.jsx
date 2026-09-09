@@ -10,7 +10,7 @@ export function PromoPeriod() {
       <a className="promo-frame" href="/catalog?sort=price-asc" aria-label="Official promo prices, see catalog">
         <span className="promo-frame-title">OFFICIAL STORE PROMO PRICES</span>
         <span className="promo-frame-date">Promo period — T&amp;Cs apply</span>
-        <span className="promo-frame-note">Prices shown are Mismi's live official store listings.</span>
+        <span className="promo-frame-note">Prices shown are Mismi&rsquo;s live official store listings.</span>
       </a>
       <div className="pills" role="navigation" aria-label="Promo tabs">
         <a className="pill" href="#promo" aria-current="page">Promo Prices</a>

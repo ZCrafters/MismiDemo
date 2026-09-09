@@ -10,9 +10,9 @@ export default function WishlistClient() {
   if (items.length === 0) {
     return (
       <div className="empty-cart">
-        <strong>Wishlist masih kosong.</strong>
-        <p className="meta">Simpan produk favoritmu dengan ikon hati di kartu produk.</p>
-        <Link className="btn" href="/catalog">Mulai Belanja →</Link>
+        <strong>Your wishlist is still empty ♡</strong>
+        <p className="meta">Save your favorites with the heart icon on any product card.</p>
+        <Link className="btn" href="/catalog">Start shopping →</Link>
       </div>
     );
   }

@@ -22,7 +22,7 @@ export default function Home() {
       <PromoPeriod />
       <NewArrivals items={newArrivals} />
       <p className="meta" style={{ marginTop: 24 }}>
-        Mismi — tas wanita cantik &amp; stylish asli Indonesia. {products.length} produk katalog demo · harga mengikuti official store.
+        Mismi — cute Korean-style women’s bags from Indonesia. {products.length} demo catalog products · prices follow the official store.
       </p>
       <VoucherPopup />
     </>

@@ -7,11 +7,11 @@ import { CloseIcon, TrashIcon } from "../ui/Icons";
 function FreeShipBar({ subtotal }) {
   const target = 500000;
   const pct = Math.min(100, Math.round((subtotal / target) * 100));
-  if (pct >= 100) return <p className="free-bar">Selamat — kamu dapat <strong>gratis ongkir</strong>!</p>;
+  if (pct >= 100) return <p className="free-bar">Yay — you’ve unlocked <strong>free shipping</strong>!</p>;
   const remain = target - subtotal;
   return (
     <div className="free-bar">
-      <span>Tambah <strong>{rupiah(remain)}</strong> untuk gratis ongkir.</span>
+      <span>Add <strong>{rupiah(remain)}</strong> more for free shipping.</span>
       <div className="track"><i style={{ width: `${pct}%` }} /></div>
     </div>
   );
@@ -22,10 +22,10 @@ export function CartDrawer() {
   return (
     <div className={`drawer${open ? " open" : ""}`} aria-hidden={!open}>
       <div className="search-scrim" onClick={() => setOpen(false)} />
-      <aside className="drawer-panel" role="dialog" aria-label="Keranjang belanja">
+      <aside className="drawer-panel" role="dialog" aria-label="Shopping cart">
         <div className="drawer-head">
-          <h2>Keranjang ({items.reduce((n, i) => n + i.qty, 0)})</h2>
-          <button className="icon-btn" aria-label="Tutup keranjang" onClick={() => setOpen(false)}>
+          <h2>Cart ({items.reduce((n, i) => n + i.qty, 0)})</h2>
+          <button className="icon-btn" aria-label="Close cart" onClick={() => setOpen(false)}>
             <CloseIcon />
           </button>
         </div>
@@ -34,9 +34,9 @@ export function CartDrawer() {
             <span className="empty-art" aria-hidden="true">
               <svg width={44} height={44} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.6}><path d="M4 5h2l2.4 11h10.4l2-8H7.2" /></svg>
             </span>
-            <strong>Keranjang masih kosong.</strong>
-            <p style={{ color: "var(--color-muted)", fontSize: 14 }}>Temukan tas cantik favoritmu di katalog Mismi.</p>
-            <a className="btn" href="/catalog" onClick={() => setOpen(false)}>Mulai Belanja →</a>
+            <strong>Your cart is still empty ♡</strong>
+            <p style={{ color: "var(--color-muted)", fontSize: 14 }}>Find your favorite cute bags in the Mismi catalog.</p>
+            <a className="btn" href="/catalog" onClick={() => setOpen(false)}>Start shopping →</a>
           </div>
         ) : (
           <>
@@ -47,15 +47,15 @@ export function CartDrawer() {
                   <div>
                     <p className="nm" style={{ margin: 0 }}>{i.name}</p>
                     <p className="vr" style={{ margin: "2px 0 0" }}>{i.size} · {i.color}</p>
-                    <div className="stepper" role="group" aria-label={`Jumlah ${i.name}`}>
-                      <button aria-label="Kurangi" onClick={() => setQty(i.slug, i.size, i.color, i.qty - 1)}>−</button>
+                    <div className="stepper" role="group" aria-label={`Quantity of ${i.name}`}>
+                      <button aria-label="Decrease" onClick={() => setQty(i.slug, i.size, i.color, i.qty - 1)}>−</button>
                       <span aria-live="polite">{i.qty}</span>
-                      <button aria-label="Tambah" onClick={() => setQty(i.slug, i.size, i.color, i.qty + 1)}>+</button>
+                      <button aria-label="Increase" onClick={() => setQty(i.slug, i.size, i.color, i.qty + 1)}>+</button>
                     </div>
                   </div>
                   <div style={{ textAlign: "right", display: "grid", gap: 8, justifyItems: "end" }}>
                     <strong style={{ fontSize: 14 }}>{rupiah(i.price * i.qty)}</strong>
-                    <button className="icon-btn" aria-label={`Hapus ${i.name}`} onClick={() => remove(i.slug, i.size, i.color)}>
+                    <button className="icon-btn" aria-label={`Remove ${i.name}`} onClick={() => remove(i.slug, i.size, i.color)}>
                       <TrashIcon size={20} />
                     </button>
                   </div>

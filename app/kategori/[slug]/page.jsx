@@ -6,7 +6,7 @@ export function generateStaticParams() {
   return [...new Set(products.map((p) => p.category))].map((slug) => ({ slug }));
 }
 
-// Slug di luar kategori → 404 statis (tidak render di request-time).
+// Slugs outside the categories → static 404 (not rendered at request time).
 export const dynamicParams = false;
 
 export default function Category({ params }) {
@@ -16,7 +16,7 @@ export default function Category({ params }) {
       <Breadcrumb trail={[{ label: "Home", href: "/" }, { label: categoryLabel(params.slug) }]} />
       <h1 style={{ margin: "4px 0 0" }}>{categoryLabel(params.slug)} ({list.length})</h1>
       {list.length === 0 ? (
-        <p>Belum ada SKU kategori ini di MVP. <a href="/catalog">Kembali ke katalog →</a></p>
+        <p>No SKUs in this category yet. <a href="/catalog">Back to the catalog →</a></p>
       ) : (
         <section className="grid" style={{ marginTop: 14 }}>
           {list.map((p) => <ProductCard key={p.slug} p={p} />)}

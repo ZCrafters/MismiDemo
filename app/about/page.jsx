@@ -1,26 +1,26 @@
-export const metadata = { title: "Tentang Mismi", robots: { index: false } };
+export const metadata = { title: "About Mismi", robots: { index: false } };
 
 export default function About() {
   return (
     <>
-      <p className="kicker" style={{ marginTop: 20 }}>TENTANG KAMI</p>
-      <h1>Tas cantik, untuk hari-hari lucu.</h1>
+      <p className="kicker" style={{ marginTop: 20 }}>ABOUT US</p>
+      <h1>Cute bags, for the cutest days ♡</h1>
       <p style={{ maxWidth: "65ch" }}>
-        Mismi adalah brand tas wanita asal Indonesia dengan gaya Korean-style — tas selempang,
-        tas ransel, dan tote bag yang manis, ringan, dan mudah dipadukan. Desainnya playful tapi
-        tetap effortless: korduroi, kanvas, motif bunga, hingga model water resistant. Katalog
-        demo ini mengambil data produk real dari official store Mismi di Tokopedia, Shopee,
-        Lazada &amp; TikTok.
+        Mismi is an Indonesian women’s bag brand with a Korean-style heart — sling bags,
+        backpacks and totes that are adorable, featherlight and easy to pair with anything.
+        The designs are playful yet effortless: corduroy, canvas, flower prints, even
+        water-repellent picks. This demo catalog pulls real product data from Mismi’s
+        official stores on Tokopedia, Shopee, Lazada &amp; TikTok.
       </p>
       <p style={{ maxWidth: "65ch" }}>
-        Dari Jakarta untuk seluruh Indonesia, Mismi hadir menemani crush, perjalanan, dan
-        hari-hari cantikmu — move easy, be Mismi. ♡
+        From Jakarta to all of Indonesia, Mismi is here for your crushes, commutes and the
+        cutest days — move easy, be Mismi. ♡
       </p>
-      <h2>Cara belanja</h2>
-      <p style={{ maxWidth: "65ch" }}>Pilih produk di halaman detail → tambah ke keranjang → checkout 3 langkah (simulasi QRIS). Order final dilakukan di official store masing-masing marketplace.</p>
-      <h2>Retur &amp; penukaran</h2>
-      <p style={{ maxWidth: "65ch" }}>Ikuti kebijakan retur official store tempat kamu membeli. Untuk bantuan, hubungi via Instagram @mismi.official.</p>
-      <p><a className="btn" href="/catalog">Mulai Belanja →</a></p>
+      <h2>How to shop</h2>
+      <p style={{ maxWidth: "65ch" }}>Pick a product on its detail page → add to cart → 3-step checkout (QRIS simulation). Final orders are placed at each marketplace’s official store.</p>
+      <h2>Returns &amp; exchanges</h2>
+      <p style={{ maxWidth: "65ch" }}>Follow the return policy of the official store you bought from. For help, reach out via Instagram @mismi.official.</p>
+      <p><a className="btn" href="/catalog">Start Shopping →</a></p>
     </>
   );
 }

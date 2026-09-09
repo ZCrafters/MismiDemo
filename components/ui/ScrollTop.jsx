@@ -1,8 +1,8 @@
 "use client";
 import { useEffect, useState } from "react";
 
-// Tombol floating kembali ke atas (pola Sociolla/demo): muncul setelah scroll
-// 400px. scroll-behavior smooth menghormati prefers-reduced-motion via CSS.
+// Floating back-to-top button (Sociolla/demo pattern): appears after scrolling
+// 400px. Smooth scroll-behavior respects prefers-reduced-motion via CSS.
 export function ScrollTop() {
   const [show, setShow] = useState(false);
   useEffect(() => {
@@ -14,7 +14,7 @@ export function ScrollTop() {
   return (
     <button
       type="button"
-      aria-label="Kembali ke atas"
+      aria-label="Back to top"
       className={`scroll-top${show ? " show" : ""}`}
       onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
     >

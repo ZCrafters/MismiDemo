@@ -27,7 +27,7 @@ export function Gallery({ images, name }) {
     return () => { window.removeEventListener("keydown", onKey); document.body.style.overflow = ""; };
   }, [lightbox, close, list.length]);
 
-  if (!list.length) return <div className="zoom-wrap" aria-label={`Foto ${name} segera hadir`} />;
+  if (!list.length) return <div className="zoom-wrap" aria-label={`Photo of ${name}, coming soon`} />;
 
   const zoom = (e) => {
     const el = mainRef.current;
@@ -43,7 +43,7 @@ export function Gallery({ images, name }) {
   return (
     <>
       <div className="gallery">
-        <div className="thumbs" role="tablist" aria-label="Thumbnail produk">
+        <div className="thumbs" role="tablist" aria-label="Product thumbnails">
           <div className="thumbs-track">
             {list.map((src, i) => (
               <button key={i} className="thumb" role="tab" aria-selected={i === active}
@@ -69,7 +69,7 @@ export function Gallery({ images, name }) {
       </div>
       {lightbox && (
         <div className="lightbox" role="dialog" aria-label={`Galeri foto ${name}`} aria-modal="true" onClick={close}>
-          <button className="icon-btn lightbox-close" aria-label="Tutup galeri" onClick={close}>
+          <button className="icon-btn lightbox-close" aria-label="Close gallery" onClick={close}>
             <CloseIcon size={24} />
           </button>
           <div className="lightbox-inner" onClick={(e) => e.stopPropagation()}>

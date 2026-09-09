@@ -10,7 +10,7 @@ export function generateStaticParams() {
   return products.map((p) => ({ slug: p.slug }));
 }
 
-// Slug di luar katalog → 404 statis (tidak render di request-time).
+// Slugs outside the catalog → static 404 (not rendered at request time).
 export const dynamicParams = false;
 
 export function generateMetadata({ params }) {
@@ -26,7 +26,7 @@ export default function ProductDetail({ params }) {
   if (!p) notFound();
   return (
     <>
-      <Breadcrumb trail={[{ label: "Home", href: "/" }, { label: "Katalog", href: "/catalog" }, { label: p.name }]} />
+      <Breadcrumb trail={[{ label: "Home", href: "/" }, { label: "Catalog", href: "/catalog" }, { label: p.name }]} />
       <div className="pdp">
         <Gallery images={p.images} name={p.name} />
         <BuyBox p={p} />
@@ -35,6 +35,7 @@ export default function ProductDetail({ params }) {
       <RelatedCarousel items={getRelated(p)} category={p.category} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
         "@context": "https://schema.org", "@type": "Product", name: p.name,
+        description: p.claim,
         sku: p.slug, brand: { "@type": "Brand", name: "Mismi" },
         aggregateRating: { "@type": "AggregateRating", ratingValue: p.rating, reviewCount: p.reviews },
         offers: { "@type": "Offer", priceCurrency: "IDR", price: p.price, availability: "https://schema.org/InStock" }

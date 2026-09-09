@@ -2,17 +2,17 @@ import { Rating } from "../ui/ProductCard";
 import { StarIcon } from "../ui/Icons";
 
 const DUMMY_REVIEWS = [
-  { name: "Ayu K.", initial: "A", color: "#a6125c", days: 12, title: "Sling bag-nya lucu banget", body: "Mismi Hazel kesayangan banget. Bahan tahan air, muat banyak, warna pink-nya soft dan cocok buat outfit harian. Kirim cepat, packing rapi.", verified: true },
-  { name: "Dinda M.", initial: "D", color: "#b4135e", days: 27, title: "Tote bag korduroi juara", body: "Hills Tote motif beruangnya gemas, bahannya tebal dan jahitannya rapi. Buat kuliah dan jalan-jalan, pas. Harga promo-nya juga masuk akal.", verified: true },
-  { name: "Rani P.", initial: "R", color: "#3a1230", days: 41, title: "Ransel korea style andalan", body: "Mismi Jasmine bener-bener korean look. Muat laptop dan buku, tali bahunya nyaman. Sering ditanya-tanya temen karena desainnya beda.", verified: false },
+  { name: "Ayu K.", initial: "A", color: "#a6125c", days: 12, title: "Adorable sling bag!", body: "Mismi Hazel is my absolute fave. Water-repellent, fits everything, and the soft pink works with every outfit. Fast shipping, tidy packing.", verified: true },
+  { name: "Dinda M.", initial: "D", color: "#b4135e", days: 27, title: "The corduroy tote is a win", body: "Hills Tote's bear print is too cute. Thick fabric, neat stitching — perfect for campus and weekend trips. The promo price is super reasonable too.", verified: true },
+  { name: "Rani P.", initial: "R", color: "#3a1230", days: 41, title: "My go-to Korean backpack", body: "Mismi Jasmine is genuinely Korean-look. Fits my laptop and books, comfy straps, and the design is so unique my friends keep asking about it.", verified: false },
 ];
 
 export function ReviewSection({ product }) {
   return (
-    <section aria-label="Ulasan pembeli" style={{ marginTop: 32 }}>
+    <section aria-label="Customer reviews" style={{ marginTop: 32 }}>
       <div className="section-head">
-        <h2>Ulasan Pembeli</h2>
-        <span className="meta">{product.reviews} ulasan</span>
+        <h2>Customer Reviews</h2>
+        <span className="meta">{product.reviews} reviews</span>
       </div>
       <div className="review-summary">
         <div>
@@ -30,10 +30,10 @@ export function ReviewSection({ product }) {
             <div className="review-body">
               <div className="review-meta">
                 <strong>{r.name}</strong>
-                {r.verified && <span className="badge-verified">Pembelian terverifikasi</span>}
-                <span className="meta">{r.days} hari lalu</span>
+                {r.verified && <span className="badge-verified">Verified buyer</span>}
+                <span className="meta">{r.days} days ago</span>
               </div>
-              <div className="stars" aria-label={`Rating ${5 - (i % 2)} dari 5`}>
+              <div className="stars" aria-label={`Rating ${5 - (i % 2)} out of 5`}>
                 {[1, 2, 3, 4, 5].map((s) => <StarIcon key={s} size={13} filled={s <= 5 - (i % 2)} />)}
               </div>
               <strong className="review-title">{r.title}</strong>

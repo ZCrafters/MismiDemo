@@ -1,9 +1,9 @@
 import clsx from "clsx";
 import { Spotlight, SpotLightItem } from "../ui/Spotlight";
 
-// Kartu promo horizontal (pola "Special Promo" Sociolla, tema Glow Mismi).
-// Server component — hanya link + salinan generik yang sesuai disclaimer demo
-// (tidak mengarang angka diskon; harga promo nyata ada di katalog/PDP).
+// Horizontal promo cards (Sociolla Special Promo pattern, Mismi Glow theme).
+// Server component — links + generic copy only, matching the demo disclaimer
+// (no invented discount numbers; real promo prices live in the catalog/PDP).
 
 const PROMOS = [
   { t: "Official store promo prices", d: "Live marketplace listings, T&Cs apply", href: "/catalog?sort=price-asc", tone: "pink" },

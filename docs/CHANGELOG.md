@@ -1,5 +1,13 @@
 # CHANGELOG — Mismi Demo
 
+## 2026-09-09 — Konversi copy Indonesia → English (Korean-girl voice)
+- **Copy**: seluruh teks UI/SEO/data (nav, home, PLP, PDP, about, faq, checkout, wishlist,
+  footer, kupon display, placeholder search, metadata, JSON-LD, nama & klaim produk) diterjemahkan
+  ke English bergaya "Korean girl" (bestie, playful, cute — "Move easy. Be Mismi."). Brand/kode
+  varian/harga/URL/gambar/rating tidak diubah. `categoryLabel` → Sling Bags/Tote Bags/Backpacks;
+  prefix `MSM-` & kode kupon tetap. Verifikasi: grep sisa Indonesia 0 di app/components/lib,
+  `validate` OK, `lint` 0 error, `build` exit 0 (27 halaman statis).
+
 ## 2026-09-09 — Migrasi Suur Lemoen → Mismi (Pinky Girl Fashion)
 - **Brand**: seluruh teks "Suur Lemoen"/"lemon" diganti "Mismi" (metadata, JSON-LD, header,
   footer, home, PDP, about, faq, checkout, kupon, placeholder search, localStorage keys,

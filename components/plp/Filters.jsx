@@ -5,13 +5,13 @@ export function FilterFields({ current }) {
   return (
     <>
       <fieldset>
-        <legend>Tipe produk</legend>
+        <legend>Product type</legend>
         {allCategories.map((c) => (
           <label className="check" key={c}>
             <input type="radio" name="cat" value={c} defaultChecked={cat === c} /> {categoryLabel(c)}
           </label>
         ))}
-        <label className="check"><input type="radio" name="cat" value="" defaultChecked={!cat} /> Semua</label>
+        <label className="check"><input type="radio" name="cat" value="" defaultChecked={!cat} /> All</label>
       </fieldset>
       {allSizes.length > 0 && (
         <fieldset>
@@ -25,7 +25,7 @@ export function FilterFields({ current }) {
       )}
       {allColors.length > 0 && (
         <fieldset>
-          <legend>Warna</legend>
+          <legend>Color</legend>
           {allColors.slice(0, 10).map((c) => (
             <label className="check" key={c}>
               <input type="checkbox" name="color" value={c} defaultChecked={color.split(",").includes(c)} /> {c}
@@ -36,14 +36,14 @@ export function FilterFields({ current }) {
       <fieldset>
         <legend>Promo</legend>
         <label className="check">
-          <input type="checkbox" name="sale" value="1" defaultChecked={sale === "1"} /> Harga promo saja
+          <input type="checkbox" name="sale" value="1" defaultChecked={sale === "1"} /> Promo prices only
         </label>
       </fieldset>
       <fieldset>
-        <legend>Harga maksimal</legend>
+        <legend>Max price</legend>
         <input type="range" className="price-range" name="max" min={minPrice} max={maxPrice} step={10000}
-          defaultValue={max || maxPrice} aria-label="Harga maksimal" />
-        <span style={{ fontSize: 13, color: "var(--color-muted)" }}>s.d. {rupiah(Number(max) || maxPrice)}</span>
+          defaultValue={max || maxPrice} aria-label="Max price" />
+        <span style={{ fontSize: 13, color: "var(--color-muted)" }}>up to {rupiah(Number(max) || maxPrice)}</span>
       </fieldset>
       {q && <input type="hidden" name="q" value={q} />}
       <input type="hidden" name="sort" value={sort} />
@@ -53,11 +53,11 @@ export function FilterFields({ current }) {
 
 export function FilterSidebar({ current }) {
   return (
-    <aside className="filter-box desktop-only" aria-label="Filter produk">
+    <aside className="filter-box desktop-only" aria-label="Filter products">
       <form action="/catalog" method="get">
         <div className="filter-head">
           <h3>Filter</h3>
-          <button className="btn filter-apply" type="submit">Terapkan</button>
+          <button className="btn filter-apply" type="submit">Apply</button>
         </div>
         <FilterFields current={current} />
       </form>
@@ -66,15 +66,15 @@ export function FilterSidebar({ current }) {
 }
 
 export function SortDropdown({ current, base = "/catalog" }) {
-  const opts = [["featured", "Pilihan"], ["sold", "Terlaris"], ["price-asc", "Termurah"], ["price-desc", "Termahal"], ["name-asc", "A–Z"], ["name-desc", "Z–A"], ["new", "Terbaru"]];
+  const opts = [["featured", "Featured"], ["sold", "Best sellers"], ["price-asc", "Price: low to high"], ["price-desc", "Price: high to low"], ["name-asc", "A–Z"], ["name-desc", "Z–A"], ["new", "Newest"]];
   const qs = new URLSearchParams();
   ["q", "cat", "size", "color", "max", "sale"].forEach((k) => current[k] && qs.set(k, current[k]));
   const otherQs = [...qs.entries()].map(([k, v]) => `${k}=${encodeURIComponent(v)}`).join("&");
   const href = (sort) => `${base}?${otherQs ? otherQs + "&" : ""}sort=${sort}`;
-  const label = opts.find(([v]) => v === (current.sort || "featured"))?.[1] || "Pilihan";
+  const label = opts.find(([v]) => v === (current.sort || "featured"))?.[1] || "Featured";
   return (
     <details className="sort-dd">
-      <summary aria-label="Urutkan produk">Urut: {label} ▾</summary>
+      <summary aria-label="Sort products">Sort: {label} ▾</summary>
       <div className="sort-menu" role="menu">
         {opts.map(([v, l]) => <a key={v} href={href(v)}>{l}</a>)}
       </div>

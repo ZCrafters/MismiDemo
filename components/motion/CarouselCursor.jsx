@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useRef } from "react";
 
-// Efek kursor carousel (reimplementasi manual ala Cursify MCP): kartu di dalam
+// Carousel cursor effect (manual Cursify-MCP-style reimplementation): cards inside
 // container "terangkat" (translateY + scale) mengikuti kedekatan pointer —
 // makin dekat makin naik, kuadrat agar halus di tepi. Transform-only lewat
 // rAF; nonaktif di touch & prefers-reduced-motion.

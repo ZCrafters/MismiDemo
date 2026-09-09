@@ -3,9 +3,9 @@ import clsx from "clsx";
 import { COUPONS, COUPON_TONES as TONE } from "../../lib/coupons";
 import { useToast } from "../ui/Toast";
 
-// Strip kupon swipeable (pola voucher Sociolla): kartu voucher dengan kode
-// yang bisa disalin. Kode & nominal adalah ilustrasi demo — voucher asli
-// hanya tersedia di official store (dinyatakan eksplisit di footnote).
+// Swipeable coupon strip (Sociolla voucher pattern): voucher cards with copyable
+// codes. Codes & amounts are illustrative demo — real vouchers live only at the
+// official store (stated explicitly in the footnote).
 
 const TICKET = (
   <svg width={18} height={18} viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -54,7 +54,7 @@ export function CouponStrip() {
                 onClick={() => copy(c.code)}
                 className="rounded-full bg-primary px-3 py-1 text-xs font-bold text-white transition hover:bg-accent-dark"
               >
-                Salin
+                Copy
               </button>
             </div>
           </div>

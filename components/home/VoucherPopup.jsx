@@ -60,9 +60,9 @@ export function VoucherPopup() {
   const copy = async () => {
     try {
       await navigator.clipboard.writeText(coupon.code);
-      toast(`Kode tersalin: ${coupon.code}`);
+      toast(`Code copied: ${coupon.code}`);
     } catch {
-      toast(`Kode: ${coupon.code}`);
+      toast(`Code: ${coupon.code}`);
     }
   };
 
@@ -71,19 +71,19 @@ export function VoucherPopup() {
   return (
     <div className={`vpop${open ? " open" : ""}`} aria-hidden={!open}>
       <div className="search-scrim" onClick={dismiss} />
-      <div className="vpop-card" role="dialog" aria-modal="true" aria-label="Voucher spesial untukmu">
-        <button ref={closeRef} type="button" className="icon-btn vpop-x" aria-label="Tutup popup" onClick={dismiss}>
+      <div className="vpop-card" role="dialog" aria-modal="true" aria-label="A special voucher for you">
+        <button ref={closeRef} type="button" className="icon-btn vpop-x" aria-label="Close popup" onClick={dismiss}>
           <CloseIcon />
         </button>
-        <p className="vpop-kicker">Spesial buat kamu</p>
+        <p className="vpop-kicker">Just for you</p>
         <p className="vpop-title">{coupon.title}</p>
         <p className="vpop-desc">{coupon.desc}</p>
-        <p className="vpop-code" aria-label={`Kode voucher ${coupon.code}`}>{coupon.code}</p>
+        <p className="vpop-code" aria-label={`Voucher code ${coupon.code}`}>{coupon.code}</p>
         <div className="vpop-actions">
-          <button type="button" className="btn" onClick={copy}>Salin Kode</button>
-          <a href="/#kupon" onClick={dismiss}>Lihat semua kupon →</a>
+          <button type="button" className="btn" onClick={copy}>Copy Code</button>
+          <a href="/#kupon" onClick={dismiss}>View all coupons →</a>
         </div>
-        <p className="vpop-note">Ilustrasi demo — voucher asli di official store.</p>
+        <p className="vpop-note">Illustrative demo — real vouchers live at the official store.</p>
       </div>
     </div>
   );

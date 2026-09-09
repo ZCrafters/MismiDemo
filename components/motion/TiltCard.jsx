@@ -1,8 +1,8 @@
 "use client";
 import { useEffect, useRef } from "react";
 
-// Tilt 3D ringan (reimplementasi manual interaksi ala 21st MCP): elemen miring
-// mengikuti posisi pointer (perspective + rotateX/rotateY), reset saat keluar.
+// Lightweight 3D tilt (manual 21st-MCP-style interaction reimplementation): element tilts
+// to follow the pointer (perspective + rotateX/rotateY), resets on leave.
 // Transform-only, batched rAF; nonaktif di touch & prefers-reduced-motion.
 
 // Versi hook: tempel ke ref elemen yang sudah ada (mis. zoom-wrap galeri PDP)

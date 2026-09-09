@@ -28,14 +28,14 @@ export function CountdownBar() {
   const m = left == null ? "--" : pad(Math.floor((left % 3600) / 60));
   const s = left == null ? "--" : pad(left % 60);
   return (
-    <section aria-label="Promo berakhir pada akhir hari ini" className="countdown-bar">
+    <section aria-label="Promo ends at the end of today" className="countdown-bar">
       <p className="countdown-copy">
-        <strong>Promo official store</strong> <span>berakhir dalam · s&amp;k berlaku</span>
+        <strong>Official store promo</strong> <span>ends in · T&amp;Cs apply</span>
       </p>
       <p className="countdown-clock" aria-hidden="true">
         <span>{h}</span>:<span>{m}</span>:<span>{s}</span>
       </p>
-      <a className="countdown-cta" href="/catalog?sort=price-asc">Belanja Promo</a>
+      <a className="countdown-cta" href="/catalog?sort=price-asc">Shop Promo</a>
     </section>
   );
 }

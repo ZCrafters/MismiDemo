@@ -15,7 +15,7 @@ const SLIDES = [
     text: "Slings, totes & backpacks with a Korean touch — lovely fabrics, friendly prices, easy to mix and match.",
     cta: "Shop now",
     href: "/catalog",
-    // Satu produk representatif per kategori (bukan 3 varian sama) supaya foto match copy-nya.
+    // One representative product per category (not 3 of the same) so the photo matches the copy.
     pick: (ps) => {
       const cats = ["tas-selempang", "tote-bag", "tas-ransel"];
       const list = cats

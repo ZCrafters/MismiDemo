@@ -18,8 +18,8 @@ export function Rating({ value, reviews, size = 14 }) {
   );
 }
 
-// Anatomi card ala referensi Sociolla: foto → ribbon diskon/NEW + hati →
-// ukuran → status stok (pill 3 warna) → nama → harga (coret + promo + catatan).
+// Card anatomy in the style of the Sociolla reference: photo → discount/NEW ribbon + heart →
+// size → stock status (3-tone pill) → name → price (struck + promo + note).
 export function ProductCard({ p }) {
   const stock = p.stock || { type: "available" };
   const stockLabel =

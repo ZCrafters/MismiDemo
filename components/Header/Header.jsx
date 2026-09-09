@@ -7,9 +7,9 @@ import { CartBadge } from "./CartBadge";
 import { MobileNav } from "./MobileNav";
 import { CountdownBar } from "../ui/CountdownBar";
 
-// Header ala Sociolla (diadaptasi ke tema Glow Mismi): strip demo + strip
-// promo + countdown (statis, ikut scroll) lalu bar navigasi sticky berisi
-// wordmark, search lebar (desktop), wishlist, keranjang, dan pill kategori.
+// Sociolla-style header (adapted to the Glow Mismi theme): demo strip + promo
+// strip + countdown (static, scrolls along) then a sticky nav bar with the
+// wordmark, wide search (desktop), wishlist, cart, and category pills.
 const SHORT_LABEL = {
   "tas-ransel": "Backpacks",
   "tote-bag": "Tote Bags",

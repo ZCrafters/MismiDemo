@@ -27,9 +27,9 @@ export function ShareButtons({ slug, name }) {
 
   return (
     <div className="share-row" aria-label="Bagikan produk">
-      <button type="button" className="share-btn" onClick={copy} aria-label="Salin tautan produk">
+      <button type="button" className="share-btn" onClick={copy} aria-label="Copy product link">
         {copied ? <CheckIcon size={14} /> : <ShareIcon size={14} />}
-        {copied ? "Tersalin" : "Salin tautan"}
+        {copied ? "Copied" : "Copy link"}
       </button>
       <a className="share-btn" href={wa} target="_blank" rel="noreferrer" aria-label="Bagikan via WhatsApp">WhatsApp</a>
       <button type="button" className="share-btn" onClick={shareNative} aria-label="Bagikan produk">Bagikan</button>

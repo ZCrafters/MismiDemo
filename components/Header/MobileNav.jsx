@@ -6,9 +6,9 @@ import {
   StarIcon, ClockIcon, GiftIcon, HeartIcon, ShieldIcon, ChevronRightIcon,
 } from "../ui/Icons";
 
-// Drawer navigasi mobile ala menu ikon Sociolla (tanpa pilihan negara/login,
-// disesuaikan katalog Mismi): search ringkas + grup Kategori, Promo &
-// Kupon, Best Seller & Terbaru, Wishlist & Bantuan.
+// Mobile nav drawer in the style of Sociolla's icon menu (no country/login picks,
+// tuned to the Mismi catalog): compact search + Categories, Promo & Coupons,
+// Best Sellers & New In, Wishlist & Help groups.
 const QUICK = [
   { href: "/catalog?sale=1", icon: TagIcon, title: "Promo", desc: "Deals & special prices" },
   { href: "/catalog?sort=sold", icon: StarIcon, title: "Best Sellers", desc: "The most-loved picks" },
@@ -56,7 +56,7 @@ export function MobileNav() {
 
           <form className="mnav-search" action="/catalog" method="get" role="search" onSubmit={close}>
             <SearchIcon size={18} aria-hidden="true" />
-            <input type="search" name="q" placeholder="Search: sling bags, ransel, tote bags…" aria-label="Search products" autoComplete="off" />
+            <input type="search" name="q" placeholder="Search: sling bags, backpacks, tote bags…" aria-label="Search products" autoComplete="off" />
           </form>
 
           <p className="mnav-label">Shop</p>

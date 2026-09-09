@@ -8,7 +8,7 @@ export function ProductRow({ p }) {
   const full = Math.round(p.rating);
   const stock = p.stock || { type: "available" };
   const stockLabel =
-    stock.type === "out" ? "Stok Habis" : stock.type === "low" ? `Tersisa ${stock.qty}` : "Masih Tersedia";
+    stock.type === "out" ? "Sold out" : stock.type === "low" ? `Only ${stock.qty} left` : "In stock";
   return (
     <a className="row-card" href={`/produk/${p.slug}`}>
       <span className="row-img">
@@ -23,7 +23,7 @@ export function ProductRow({ p }) {
         >
           {stockLabel}
         </span>
-        <span className="row-swatches" aria-label="Pilihan warna">
+        <span className="row-swatches" aria-label="Color options">
           {(p.colors || []).slice(0, 6).map((c) => (
             <i key={c} title={c} style={{ background: DOT[c.split(" ")[0]] || "#999" }} />
           ))}
@@ -32,7 +32,7 @@ export function ProductRow({ p }) {
           <span className="stars" aria-hidden="true">
             {[1, 2, 3, 4, 5].map((i) => <StarIcon key={i} size={13} filled={i <= full} />)}
           </span>
-          <span className="meta">{p.reviews} ulasan · {p.soldLabel} terjual</span>
+          <span className="meta">{p.reviews} reviews{p.soldLabel ? ` · ${p.soldLabel}` : ""}</span>
         </span>
       </span>
       <span className="row-price">

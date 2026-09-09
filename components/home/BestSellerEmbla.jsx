@@ -14,9 +14,9 @@ import {
 } from "../ui/EmblaCarousel";
 import { ChevronLeftIcon, ChevronRightIcon } from "../ui/Icons";
 
-// Rel Best Seller pakai embla (port ui-layouts `carousel`): drag + autoplay +
-// counter + dots + panah + navigasi keyboard. Autoplay mati saat
-// prefers-reduced-motion. SSR aman: DOM server & klien identik.
+// Best-sellers rail using embla (ui-layouts carousel port): drag + autoplay +
+// counter + dots + arrows + keyboard nav. Autoplay off under
+// prefers-reduced-motion. SSR-safe: identical server & client DOM.
 export function BestSellerEmbla({ items }) {
   const reduceMotion =
     typeof window !== "undefined" &&

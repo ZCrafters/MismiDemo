@@ -6,21 +6,21 @@ const PAY = ["VISA", "Mastercard", "GoPay", "OVO", "DANA", "Transfer Bank"];
 
 const COLS = [
   {
-    title: "Bantuan",
+    title: "Help",
     links: [
       { label: "FAQ", href: "/faq" },
-      { label: "Cara belanja", href: "/about" },
-      { label: "Info pengiriman", href: "/about" },
-      { label: "Retur & penukaran", href: "/about" },
-      { label: "Hubungi kami", href: "/about" },
+      { label: "How to shop", href: "/about" },
+      { label: "Shipping info", href: "/about" },
+      { label: "Returns & exchanges", href: "/about" },
+      { label: "Contact us", href: "/about" },
     ],
   },
   {
-    title: "Tentang Mismi",
+    title: "About Mismi",
     links: [
-      { label: "Brand kami", href: "/about" },
+      { label: "Our brand", href: "/about" },
       { label: "Wishlist", href: "/wishlist" },
-      { label: "New launch", href: "/catalog?sort=new" },
+      { label: "New launches", href: "/catalog?sort=new" },
     ],
   },
   {
@@ -34,7 +34,7 @@ const COLS = [
     ],
   },
   {
-    title: "Sosial Media",
+    title: "Social Media",
     blank: true,
     links: [
       { label: "Instagram", href: "https://www.instagram.com/mismi.official" },
@@ -43,9 +43,9 @@ const COLS = [
   },
 ];
 
-// Footer panel ala ui-layouts `hover-footer` (MIT), diadaptasi ke tema Glow:
-// pita + newsletter pil + kolom link + wordmark raksasa bergradien
-// mengikuti kursor + chip pembayaran. Logika newsletter tetap milik Mismi.
+// Footer panel in the style of ui-layouts `hover-footer` (MIT), adapted to the Glow theme:
+// band + newsletter pill + link columns + giant gradient wordmark that follows
+// the cursor + payment chips. Newsletter logic still belongs to Mismi.
 export function Footer() {
   const [email, setEmail] = useState("");
   const [done, setDone] = useState(false);
@@ -53,7 +53,7 @@ export function Footer() {
   const submit = (e) => {
     e.preventDefault();
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-      setErr("Masukkan alamat email yang valid.");
+      setErr("Please enter a valid email address.");
       return;
     }
     setErr("");
@@ -65,34 +65,34 @@ export function Footer() {
         <div className="foot-band">
           <div className="foot-band-brand">
             <p className="foot-wordmark" aria-label="Mismi">mismi<span>.</span></p>
-            <p className="foot-tagline">Tas wanita cantik &amp; stylish ala Korea — untuk crush, perjalanan &amp; hari-hari lucu.</p>
+            <p className="foot-tagline">Cute Korean-style bags — for crushes, commutes &amp; the cutest days 🍒</p>
           </div>
           <div className="foot-news">
-            <p className="foot-news-title">Dapatkan info &amp; promo</p>
+            <p className="foot-news-title">Get news &amp; promos</p>
             {done ? (
-              <p className="foot-news-done" role="status">Terima kasih! Email kamu terdaftar.</p>
+              <p className="foot-news-done" role="status">Thanks! Your email is in.</p>
             ) : (
               <form className="foot-news-form" onSubmit={submit} noValidate>
                 <input
                   type="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  placeholder="Alamat email"
-                  aria-label="Alamat email"
+                  placeholder="Email address"
+                  aria-label="Email address"
                   aria-invalid={err ? "true" : undefined}
                 />
-                <button className="btn" type="submit">Daftar</button>
+                <button className="btn" type="submit">Join</button>
               </form>
             )}
             {err && <p className="foot-news-err" role="alert">{err}</p>}
-            <div className="pay-grid" aria-label="Metode pembayaran">
+            <div className="pay-grid" aria-label="Payment methods">
               {PAY.map((p) => <span key={p} className="pay-chip">{p}</span>)}
               <span className="pay-chip">QRIS</span>
             </div>
           </div>
         </div>
 
-        <nav className="foot-cols" aria-label="Navigasi footer">
+        <nav className="foot-cols" aria-label="Footer navigation">
           {COLS.map((c) => (
             <div key={c.title}>
               <h3>{c.title}</h3>
@@ -107,7 +107,7 @@ export function Footer() {
 
         <AnimatedText text="mismi" className="foot-giant" />
 
-        <div className="foot-bottom">© 2026 Mismi demo · Harga &amp; stok mengikuti official store · #MoveEasyBeMismi</div>
+        <div className="foot-bottom">© 2026 Mismi demo · Prices &amp; stock follow the official store · #MoveEasyBeMismi</div>
       </div>
     </footer>
   );

@@ -12,13 +12,13 @@ export function FilterBottomSheet({ current, count }) {
       </button>
       <div className={`sheet${open ? " open" : ""}`} aria-hidden={!open}>
         <div className="search-scrim" onClick={() => setOpen(false)} />
-        <div className="sheet-panel" role="dialog" aria-label="Filter produk">
+        <div className="sheet-panel" role="dialog" aria-label="Filter products">
           <div className="sheet-grab" aria-hidden="true" />
           <div className="filter-head">
             <strong>Filter</strong>
             <div style={{ display: "flex", gap: 6, alignItems: "center" }}>
-              <button className="btn" type="submit" form="mobile-filter-form">Terapkan</button>
-              <button className="icon-btn" aria-label="Tutup filter" onClick={() => setOpen(false)}>
+              <button className="btn" type="submit" form="mobile-filter-form">Apply</button>
+              <button className="icon-btn" aria-label="Close filters" onClick={() => setOpen(false)}>
                 <CloseIcon />
               </button>
             </div>

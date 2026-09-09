@@ -5,7 +5,7 @@ import { SearchIcon, CloseIcon, ClockIcon } from "../ui/Icons";
 import { products } from "../../lib/products";
 
 const KEY = "mismi-search-v1";
-const HINTS = ["tas selempang", "ransel", "tote bag", "korduroi", "water resistant", "motif bunga"];
+const HINTS = ["sling bags", "tote bags", "backpacks", "corduroy", "water-repellent", "flower print"];
 
 export function ExpandableSearch() {
   const [open, setOpen] = useState(false);
@@ -52,7 +52,7 @@ export function ExpandableSearch() {
                 type="search"
                 value={q}
                 onChange={(e) => setQ(e.target.value)}
-                placeholder="Cari: tas selempang, ransel, tote bag…"
+                placeholder="Search: sling bags, backpacks, totes…"
                 aria-label="Search products"
                 autoComplete="off"
                 tabIndex={open ? 0 : -1}

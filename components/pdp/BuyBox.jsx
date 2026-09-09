@@ -54,33 +54,33 @@ export function BuyBox({ p }) {
           <span
             className={`inline-block rounded-full px-2 py-0.5 text-[11px] font-semibold leading-5 text-white ${p.stock.type === "out" ? "bg-muted" : p.stock.type === "low" ? "bg-danger" : "bg-success"}`}
           >
-            {p.stock.type === "out" ? "Stok Habis" : p.stock.type === "low" ? `Tersisa ${p.stock.qty}` : "Masih Tersedia"}
+            {p.stock.type === "out" ? "Sold out" : p.stock.type === "low" ? `Only ${p.stock.qty} left` : "In stock"}
           </span>
         </p>
       )}
-      {p.provisional && <p className="meta">Harga provisional — konfirmasi di official store.</p>}
+      {p.provisional && <p className="meta">Provisional price — confirm at the official store.</p>}
 
       {hasVariants && (
         <>
           <p className="opt-label" id="size-group">
-            <span>Pilih varian</span>
-            {needSize && <span className="opt-hint" role="alert">Wajib pilih varian dulu</span>}
+            <span>Pick a variant</span>
+            {needSize && <span className="opt-hint" role="alert">Please pick a variant first</span>}
           </p>
-          <div className="size-grid" role="group" aria-label="Pilihan varian" aria-describedby={needSize ? "size-err" : undefined}>
+          <div className="size-grid" role="group" aria-label="Variant options" aria-describedby={needSize ? "size-err" : undefined}>
             {(p.sizes || []).map((s) => (
               <button key={s} className="size-btn" aria-pressed={size === s} onClick={() => setSize(s)}>
                 {s} {size === s && <CheckIcon size={16} />}
               </button>
             ))}
           </div>
-          {needSize && <p id="size-err" className="opt-hint">Pilih salah satu varian untuk lanjut.</p>}
+          {needSize && <p id="size-err" className="opt-hint">Choose one variant to continue.</p>}
         </>
       )}
 
       {(p.colors || []).length > 0 && (
         <>
-          <p className="opt-label"><span>Varian warna{color ? `: ${color}` : ""}</span></p>
-          <div className="swatches" role="group" aria-label="Pilihan warna">
+          <p className="opt-label"><span>Color{color ? `: ${color}` : ""}</span></p>
+          <div className="swatches" role="group" aria-label="Color options">
             {(p.colors || []).map((c) => (
               <button key={c} className="swatch" aria-pressed={color === c} aria-label={c} title={c}
                 style={{ "--sw": SWATCH[c.split(" ")[0]] || "#999" }} onClick={() => setColor(c)}>
@@ -93,14 +93,14 @@ export function BuyBox({ p }) {
 
       <div className="buy-sticky">
         <button ref={btnRef} className="btn" onClick={buy} aria-disabled={hasVariants && !size}>
-          Tambah ke Keranjang
+          Add to Cart
         </button>
       </div>
-      {added && <p className="meta" role="status">Ditambahkan: {p.name}{p.pack ? ` · ${p.pack}` : ""}.</p>}
+      {added && <p className="meta" role="status">Added: {p.name}{p.pack ? ` · ${p.pack}` : ""}.</p>}
 
       <p className="meta" style={{ display: "flex", gap: 16, marginTop: 14 }}>
-        <span style={{ display: "inline-flex", gap: 6, alignItems: "center" }}><TruckIcon size={18} /> Kirim official store</span>
-        <span style={{ display: "inline-flex", gap: 6, alignItems: "center" }}><ShieldIcon size={18} /> Produk original &amp; terjamin</span>
+        <span style={{ display: "inline-flex", gap: 6, alignItems: "center" }}><TruckIcon size={18} /> Ships from official store</span>
+        <span style={{ display: "inline-flex", gap: 6, alignItems: "center" }}><ShieldIcon size={18} /> Genuine &amp; quality-checked</span>
       </p>
 
       <ShareButtons slug={p.slug} name={p.name} />
@@ -111,18 +111,18 @@ export function BuyBox({ p }) {
 
       {p.claim && (
         <details className="acc" open>
-          <summary>Detail Produk</summary>
+          <summary>Product Details</summary>
           <div className="acc-body">{p.claim}</div>
         </details>
       )}
 
       <details className="acc">
-        <summary>Cara Merawat</summary>
-        <div className="acc-body">Bersihkan dengan kain lembut &amp; kering, hindari merendam berlebih (kecuali produk water resistant), dan jemur di tempat teduh. Simpan di tempat kering saat tidak dipakai.</div>
+        <summary>How to Care</summary>
+        <div className="acc-body">Wipe gently with a soft, dry cloth; avoid soaking (unless water-repellent) and air-dry in the shade. Store somewhere dry when not in use.</div>
       </details>
       <details className="acc">
-        <summary>Info Pengiriman</summary>
-        <div className="acc-body">Order final dilakukan di official store Mismi (Tokopedia / Shopee / Lazada / TikTok). Demo ini hanya simulasi — harga &amp; stok dapat berubah.</div>
+        <summary>Shipping Info</summary>
+        <div className="acc-body">Final orders are placed at Mismi&rsquo;s official stores (Tokopedia / Shopee / Lazada / TikTok). This demo is a simulation — prices &amp; stock can change.</div>
       </details>
     </div>
   );

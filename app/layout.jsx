@@ -9,13 +9,13 @@ import { Header } from "../components/Header/Header";
 import { Footer } from "../components/Footer/Footer";
 
 export const metadata = {
-  title: "Mismi — Tas Wanita Cantik & Stylish Indonesia",
-  description: "Tas selempang, ransel & tote bag Korean-style. Cantik, ringan, buat tiap hari. Demo — harga mengikuti official store."
+  title: "Mismi — Cute Korean-Style Bags for Every Day",
+  description: "Korean-style sling bags, backpacks & tote bags. Cute, lightweight, made for everyday. Demo — prices follow the official store."
 };
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="id">
+    <html lang="en">
       <body>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />

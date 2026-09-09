@@ -7,7 +7,7 @@ import { createContext, useContext, useEffect, useState } from "react";
 // - Gradien putih (invisible di background krem) → glow raspberry lembut
 // - Semua overlay pointer-events-none agar link/konten di dalam tetap bisa diklik
 // - Listener mousemove global hanya dipasang bila efek proximity/hover aktif
-//   dan pointer presisi (hemat di touch)
+//   and a precise pointer (cheap on touch)
 
 const SpotLightContext = createContext(undefined);
 

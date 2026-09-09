@@ -2,9 +2,9 @@
   {
     "id": 1,
     "slug": "mismi-jasmine-bag",
-    "name": "Mismi Jasmine Bag Tas Ransel Wanita Korduroi Korean Flower School Backpack Perempuan Stylish - 47J",
+    "name": "Mismi Jasmine Bag — Corduroy Korean Flower School Backpack - 47J",
     "category": "tas-ransel",
-    "categoryLabel": "Tas Ransel",
+    "categoryLabel": "Backpacks",
     "pack": "",
     "sizes": [],
     "colors": [],
@@ -12,7 +12,7 @@
     "originalPrice": null,
     "discountPercent": 0,
     "bpom": "",
-    "claim": "Ransel korduroi motif flower korea.",
+    "claim": "Corduroy backpack with a Korean flower print.",
     "images": [
       "/placeholder-bag.svg"
     ],
@@ -22,15 +22,15 @@
     "newTag": false,
     "rating": 5,
     "soldCount": 0,
-    "soldLabel": "6 terjual",
+    "soldLabel": "6 sold",
     "sourceUrl": "https://www.lazada.co.id/shop/mismi-bags"
   },
   {
     "id": 2,
     "slug": "mismi-hills-bag",
-    "name": "Mismi Hills Tote Bag Tas Selempang Wanita Korduroi Korea Karakter Beruang Lucu Stylish - 19H",
+    "name": "Mismi Hills Tote Bag — Corduroy Bear Character Tote - 19H",
     "category": "tote-bag",
-    "categoryLabel": "Tote Bag",
+    "categoryLabel": "Tote Bags",
     "pack": "",
     "sizes": [],
     "colors": [],
@@ -38,7 +38,7 @@
     "originalPrice": null,
     "discountPercent": 0,
     "bpom": "",
-    "claim": "Tote korduroi karakter beruang, promo voucher.",
+    "claim": "Corduroy tote with a cute bear character + voucher promo.",
     "images": [
       "/placeholder-bag.svg"
     ],
@@ -48,15 +48,15 @@
     "newTag": false,
     "rating": 4.8,
     "soldCount": 0,
-    "soldLabel": "1,6K terjual",
+    "soldLabel": "1.6K sold",
     "sourceUrl": "https://pages.lazada.co.id/tote-bag-wanita/mismi-124216270"
   },
   {
     "id": 3,
     "slug": "mismi-sasha-bag",
-    "name": "Mismi Sasha Bag Tas Selempang Wanita - LazMall",
+    "name": "Mismi Sasha Bag — Sling Bag - LazMall",
     "category": "tas-selempang",
-    "categoryLabel": "Tas Selempang",
+    "categoryLabel": "Sling Bags",
     "pack": "",
     "sizes": [],
     "colors": [],
@@ -64,7 +64,7 @@
     "originalPrice": 97627,
     "discountPercent": 29,
     "bpom": "",
-    "claim": "Tas selempang wanita (listing LazMall mismi-bags).",
+    "claim": "Women's sling bag (LazMall listing from mismi-bags).",
     "images": [
       "/placeholder-bag.svg"
     ],
@@ -74,15 +74,15 @@
     "newTag": true,
     "rating": 4.9,
     "soldCount": 0,
-    "soldLabel": "104 terjual",
+    "soldLabel": "104 sold",
     "sourceUrl": "https://www.lazada.co.id/shop/mismi-bags"
   },
   {
     "id": 4,
     "slug": "mismi-hazel-bag",
-    "name": "Mismi Hazel Bag Tas Selempang Wanita Korean Style SImple Sling Bag Perempuan Tahan Air Stylish - 31H",
+    "name": "Mismi Hazel Bag — Korean-Style Water-Repellent Sling Bag - 31H",
     "category": "tas-selempang",
-    "categoryLabel": "Tas Selempang",
+    "categoryLabel": "Sling Bags",
     "pack": "",
     "sizes": [],
     "colors": [],
@@ -90,7 +90,7 @@
     "originalPrice": null,
     "discountPercent": 0,
     "bpom": "",
-    "claim": "Sling bag simple tahan air, terlaris di Shopee Mismi.",
+    "claim": "Simple, water-repellent sling bag — a Shopee best seller.",
     "images": [
       "/placeholder-bag.svg"
     ],
@@ -100,15 +100,15 @@
     "newTag": false,
     "rating": 4.8,
     "soldCount": 0,
-    "soldLabel": "19rb+",
+    "soldLabel": "19K+",
     "sourceUrl": "https://shopee.co.id/Mismi-Hazel-Bag-Tas-Selempang-Wanita-Korean-Style-SImple-Sling-Bag-Perempuan-Tahan-Air-Stylish-31H-i.342985281.15498758971"
   },
   {
     "id": 5,
     "slug": "mismi-wendy-bag",
-    "name": "Mismi Wendy Bag - Tas Selempang Wanita Korean Style Sling Bag Perempuan Import Trendy - 14Y",
+    "name": "Mismi Wendy Bag — Korean-Style Trendy Sling Bag - 14Y",
     "category": "tas-selempang",
-    "categoryLabel": "Tas Selempang",
+    "categoryLabel": "Sling Bags",
     "pack": "",
     "sizes": [],
     "colors": [],
@@ -116,7 +116,7 @@
     "originalPrice": null,
     "discountPercent": 0,
     "bpom": "",
-    "claim": "Sling bag korean style import, trendy.",
+    "claim": "Trendy Korean-style sling bag.",
     "images": [
       "/placeholder-bag.svg"
     ],
@@ -126,15 +126,15 @@
     "newTag": false,
     "rating": 4.8,
     "soldCount": 0,
-    "soldLabel": "5rb-",
+    "soldLabel": "5K+",
     "sourceUrl": "https://shopee.co.id/Mismi-Wendy-Bag-Tas-Selempang-Wanita-Korean-Style-Sling-Bag-Perempuan-Import-Trendy-14Y-i.342985281.15630624690"
   },
   {
     "id": 6,
     "slug": "mismi-carol-bag",
-    "name": "Mismi Carol Bag Tas Selempang Bahu Wanita Korduroi Sling Bag Stylish Tali Panjang Imut",
+    "name": "Mismi Carol Bag — Corduroy Long-Strap Sling Bag",
     "category": "tas-selempang",
-    "categoryLabel": "Tas Selempang",
+    "categoryLabel": "Sling Bags",
     "pack": "",
     "sizes": [],
     "colors": [],
@@ -142,7 +142,7 @@
     "originalPrice": 190887,
     "discountPercent": 61,
     "bpom": "",
-    "claim": "Sling bag korduroi tali panjang.",
+    "claim": "Corduroy sling bag with an adorable long strap.",
     "images": [
       "/placeholder-bag.svg"
     ],
@@ -158,9 +158,9 @@
   {
     "id": 7,
     "slug": "mismi-yarra-bag",
-    "name": "Mismi Yarra Bag Tas Selempang Tumbler Wanita Serbaguna Stylish Mini Sling Bag Perempuan",
+    "name": "Mismi Yarra Bag — Versatile Mini Tumbler Sling Bag",
     "category": "tas-selempang",
-    "categoryLabel": "Tas Selempang",
+    "categoryLabel": "Sling Bags",
     "pack": "",
     "sizes": [],
     "colors": [],
@@ -168,7 +168,7 @@
     "originalPrice": null,
     "discountPercent": 0,
     "bpom": "",
-    "claim": "Sling bag mini serbaguna muat tumbler.",
+    "claim": "Mini multi-purpose sling bag that fits your tumbler.",
     "images": [
       "/placeholder-bag.svg"
     ],
@@ -184,9 +184,9 @@
   {
     "id": 8,
     "slug": "mismi-fera-bag",
-    "name": "Mismi Fera Bag Tas Selempang Wanita Korea Tali Serut Dumpling Sling Bag Perempuan Stylish - 50F",
+    "name": "Mismi Fera Bag — Korean Dumpling Drawstring Sling Bag - 50F",
     "category": "tas-selempang",
-    "categoryLabel": "Tas Selempang",
+    "categoryLabel": "Sling Bags",
     "pack": "",
     "sizes": [],
     "colors": [],
@@ -194,7 +194,7 @@
     "originalPrice": 240000,
     "discountPercent": 81,
     "bpom": "",
-    "claim": "Tas selempang tali serut gaya dumpling, desain manis khas Mismi.",
+    "claim": "Drawstring sling bag with that cute Mismi dumpling style.",
     "images": [
       "/placeholder-bag.svg"
     ],
@@ -210,9 +210,9 @@
   {
     "id": 9,
     "slug": "mismi-aura-bag",
-    "name": "Mismi Aura Bag Tas Selempang Wanita Korean Look Cute Corduroy Sling Bag Perempuan Stylish - 25A",
+    "name": "Mismi Aura Bag — Cute Corduroy Korean-Look Sling Bag - 25A",
     "category": "tas-selempang",
-    "categoryLabel": "Tas Selempang",
+    "categoryLabel": "Sling Bags",
     "pack": "",
     "sizes": [],
     "colors": [],
@@ -220,7 +220,7 @@
     "originalPrice": null,
     "discountPercent": 0,
     "bpom": "",
-    "claim": "Sling bag korduroi korean look, cute.",
+    "claim": "Cute corduroy sling bag with a Korean look.",
     "images": [
       "/placeholder-bag.svg"
     ],
@@ -236,9 +236,9 @@
   {
     "id": 10,
     "slug": "mismi-kiara-bag",
-    "name": "Mismi Kiara Bag Tas Selempang Wanita Stylish Flower Korea Sling Bag Perempuan Travel Tote Bag Resleting - 38K",
+    "name": "Mismi Kiara Bag — Korean Flower Sling / Zip Travel Tote - 38K",
     "category": "tas-selempang",
-    "categoryLabel": "Tas Selempang",
+    "categoryLabel": "Sling Bags",
     "pack": "",
     "sizes": [],
     "colors": [],
@@ -246,7 +246,7 @@
     "originalPrice": null,
     "discountPercent": 0,
     "bpom": "",
-    "claim": "Sling bag motif flower korea, bisa jadi travel tote beresleting.",
+    "claim": "Flower-print sling that converts into a zippered travel tote.",
     "images": [
       "/placeholder-bag.svg"
     ],
@@ -262,9 +262,9 @@
   {
     "id": 11,
     "slug": "mismi-nava-bag",
-    "name": "Mismi Nava Bag Tas Selempang Wanita Korean Style Checker Tote Bag Resleting Perempuan - 18N",
+    "name": "Mismi Nava Bag — Korean Checker Zip Tote & Sling - 18N",
     "category": "tas-selempang",
-    "categoryLabel": "Tas Selempang",
+    "categoryLabel": "Sling Bags",
     "pack": "",
     "sizes": [],
     "colors": [],
@@ -272,7 +272,7 @@
     "originalPrice": null,
     "discountPercent": 0,
     "bpom": "",
-    "claim": "Sling/tote bag motif checker korea.",
+    "claim": "Korean checker sling/tote with a zipper.",
     "images": [
       "/placeholder-bag.svg"
     ],
@@ -288,9 +288,9 @@
   {
     "id": 12,
     "slug": "mismi-miranda-bag",
-    "name": "Mismi Miranda Bag Tas Ransel Wanita Korean Style Flower School Backpack Perempuan Stylish - 42M",
+    "name": "Mismi Miranda Bag — Korean-Style Flower School Backpack - 42M",
     "category": "tas-ransel",
-    "categoryLabel": "Tas Ransel",
+    "categoryLabel": "Backpacks",
     "pack": "",
     "sizes": [],
     "colors": [],
@@ -298,7 +298,7 @@
     "originalPrice": null,
     "discountPercent": 0,
     "bpom": "",
-    "claim": "Ransel korean style motif flower, cocok untuk sekolah.",
+    "claim": "Korean-style flower-print backpack, great for school.",
     "images": [
       "/placeholder-bag.svg"
     ],
@@ -314,9 +314,9 @@
   {
     "id": 13,
     "slug": "mismi-xora-bag",
-    "name": "Mismi Xora Bag Tas Selempang Wanita Stylish Premium Water Resistant Sling Bag Perempuan Trendy - 38X",
+    "name": "Mismi Xora Bag — Premium Water-Resistant Sling Bag - 38X",
     "category": "tas-selempang",
-    "categoryLabel": "Tas Selempang",
+    "categoryLabel": "Sling Bags",
     "pack": "",
     "sizes": [],
     "colors": [],
@@ -324,7 +324,7 @@
     "originalPrice": 300000,
     "discountPercent": 71,
     "bpom": "",
-    "claim": "Sling bag water resistant premium.",
+    "claim": "Premium water-resistant sling bag.",
     "images": [
       "/placeholder-bag.svg"
     ],
@@ -340,9 +340,9 @@
   {
     "id": 14,
     "slug": "mismi-unna-bag",
-    "name": "Mismi Unna Bag Tas Ransel Wanita Super Star Korean Backpack Perempuan Stylish - 36U",
+    "name": "Mismi Unna Bag — Super Star Korean Backpack - 36U",
     "category": "tas-ransel",
-    "categoryLabel": "Tas Ransel",
+    "categoryLabel": "Backpacks",
     "pack": "",
     "sizes": [],
     "colors": [],
@@ -350,7 +350,7 @@
     "originalPrice": 350000,
     "discountPercent": 61,
     "bpom": "",
-    "claim": "Ransel korean style super star.",
+    "claim": "Korean-style 'super star' backpack.",
     "images": [
       "/placeholder-bag.svg"
     ],

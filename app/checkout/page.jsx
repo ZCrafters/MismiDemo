@@ -5,7 +5,7 @@ export const metadata = { title: "Checkout — Mismi", robots: { index: false } 
 export default function CheckoutPage() {
   return (
     <>
-      <p style={{ fontSize: 12, color: "var(--color-muted)" }}>Keranjang / <strong>Checkout</strong></p>
+      <p style={{ fontSize: 12, color: "var(--color-muted)" }}>Cart / <strong>Checkout</strong></p>
       <h1 style={{ margin: "4px 0 0" }}>Checkout</h1>
       <CheckoutFlow />
     </>
