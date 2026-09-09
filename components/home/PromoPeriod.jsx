@@ -10,7 +10,7 @@ export function PromoPeriod() {
       <a className="promo-frame" href="/catalog?sort=price-asc" aria-label="Harga promo resmi, lihat katalog">
         <span className="promo-frame-title">HARGA PROMO OFFICIAL STORE</span>
         <span className="promo-frame-date">Periode promo — s&amp;k berlaku</span>
-        <span className="promo-frame-note">Harga tertera adalah harga listing resmi Suur Lemoen di marketplace.</span>
+        <span className="promo-frame-note">Harga tertera adalah harga listing resmi Mismi di marketplace.</span>
       </a>
       <div className="pills" role="navigation" aria-label="Tab promo">
         <a className="pill" href="#promo" aria-current="page">Harga Promo</a>

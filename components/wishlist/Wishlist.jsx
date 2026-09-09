@@ -4,7 +4,7 @@ import { motion, useReducedMotion } from "motion/react";
 import { useToast } from "../ui/Toast";
 
 const Ctx = createContext(null);
-const KEY = "suurlemoen-wishlist-v1";
+const KEY = "mismi-wishlist-v1";
 
 export function WishlistProvider({ children }) {
   const [slugs, setSlugs] = useState([]);

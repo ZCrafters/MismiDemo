@@ -5,7 +5,7 @@ import { ShareIcon, CheckIcon } from "../ui/Icons";
 export function ShareButtons({ slug, name }) {
   const [copied, setCopied] = useState(false);
   const url = typeof window !== "undefined" ? `${window.location.origin}/produk/${slug}/` : `/produk/${slug}/`;
-  const text = `${name} — Suur Lemoen`;
+  const text = `${name} — Mismi`;
 
   const copy = async () => {
     try {

@@ -6,31 +6,31 @@ import { useRef } from "react";
 import { products } from "../../lib/products";
 
 // Diadaptasi dari ui-layouts `sticky-scroll` (MIT): section pin 2 viewport —
-// panel headline sticky menyusut saat panel ritual hijau meluncur menutupinya.
-// Tema Glow Suur Lemoen + foto produk katalog asli. Hormati reduced-motion
+// panel headline sticky menyusut saat panel pink meluncur menutupinya.
+// Tema Glow Mismi + foto produk katalog asli. Hormati reduced-motion
 // (render statis tanpa transform).
 
 const STEPS = [
   {
     no: "01",
-    title: "Mulai Pagi",
-    desc: "Sari lemon segar untuk memulai hari — tubuh siap & berenergi.",
-    cat: "sari-lemon",
-    cta: "Lihat Sari Lemon",
+    title: "Sling Bag",
+    desc: "Tas kecil untuk hangout & commute — muat HP, ringan, manis dipakai.",
+    cat: "tas-selempang",
+    cta: "Lihat Sling Bag",
   },
   {
     no: "02",
-    title: "Detox Rutin",
-    desc: "Cuka apel & madu murni untuk pendamping pola hidup sehat harian.",
-    cat: "cuka-apel",
-    cta: "Lihat Cuka Apel",
+    title: "Backpack",
+    desc: "Ransel untuk sekolah, kerja & perjalanan — muat banyak, tetap stylish.",
+    cat: "tas-ransel",
+    cta: "Lihat Ransel",
   },
   {
     no: "03",
-    title: "Dapur Sehat",
-    desc: "Minyak zaitun & superfood untuk melengkapi rutinitas sehatmu.",
-    cat: "minyak-zaitun",
-    cta: "Lihat Minyak Zaitun",
+    title: "Tote Bag",
+    desc: "Tas jinjing simpel yang menemani hari-harimu — dari belanja sampai kantor.",
+    cat: "tote-bag",
+    cta: "Lihat Tote Bag",
   },
 ];
 
@@ -49,15 +49,15 @@ export function RitualSticky() {
   }));
 
   return (
-    <section ref={ref} aria-label="Rutinitas sehat Suur Lemoen" className="ritual">
+    <section ref={ref} aria-label="Gaya Mismi" className="ritual">
       <motion.div
         style={reduce ? undefined : { scale: scale1, rotate: rotate1 }}
         className="ritual-sticky"
       >
         <div className="bg-grid-fade" aria-hidden="true" />
-        <p className="kicker">RUTINITAS SEHAT · 3 LANGKAH</p>
-        <h2>Tiga langkah, tiap hari.</h2>
-        <p>Rutinitas minuman sehat simpel — scroll untuk lihat rangkaiannya.</p>
+        <p className="kicker">GAYA MISMI · 3 PILIHAN</p>
+        <h2>Tiga gaya, tiap hari.</h2>
+        <p>Padu padan tas Mismi yang simpel — scroll untuk lihat rangkaiannya.</p>
         <a className="btn" href="/catalog">Mulai dari Katalog →</a>
       </motion.div>
 

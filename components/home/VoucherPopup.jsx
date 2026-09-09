@@ -4,7 +4,7 @@ import { COUPONS } from "../../lib/coupons";
 import { useToast } from "../ui/Toast";
 import { CloseIcon } from "../ui/Icons";
 
-const SEEN_KEY = "suurlemoen-voucher-popup-v1";
+const SEEN_KEY = "mismi-voucher-popup-v1";
 
 // Modal voucher tengah layar: muncul sekali per sesi, HANYA di mobile
 // (≤767px), dengan jeda 1.2 detik. Bisa disilang via X / scrim / Escape.

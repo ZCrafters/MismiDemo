@@ -22,7 +22,7 @@ export default function Home() {
       <PromoPeriod />
       <NewArrivals items={newArrivals} />
       <p className="meta" style={{ marginTop: 24 }}>
-        Suur Lemoen — minuman sehat &amp; pangan alami berbasis lemon Indonesia. {products.length} produk katalog demo · harga mengikuti official store.
+        Mismi — tas wanita cantik &amp; stylish asli Indonesia. {products.length} produk katalog demo · harga mengikuti official store.
       </p>
       <VoucherPopup />
     </>

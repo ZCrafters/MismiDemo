@@ -1,7 +1,7 @@
 import WishlistClient from "./WishlistClient";
 import { Breadcrumb } from "../../components/ui/Chrome";
 
-export const metadata = { title: "Wishlist — Suur Lemoen" };
+export const metadata = { title: "Wishlist — Mismi" };
 
 export default function WishlistPage() {
   return (

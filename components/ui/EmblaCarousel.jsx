@@ -14,9 +14,9 @@ import {
   useState,
 } from "react";
 
-// Port dari ui-layouts `carousel` (MIT) ke JSX + Tailwind v3 + tema Glow Suur Lemoen:
+// Port dari ui-layouts `carousel` (MIT) ke JSX + Tailwind v3 + tema Glow Mismi:
 // - Hilangkan varian `dark:`, sintaks v4 (`focus:outline-hidden` → `outline-none`, `z-3` → `z-[3]`)
-// - Aksen memakai token Suur Lemoen (primary/accent/line)
+// - Aksen memakai token Mismi (primary/accent/line)
 // - Tanpa ThumbsSlider (tak dipakai di demo ini)
 
 // ============= CONTEXT =============

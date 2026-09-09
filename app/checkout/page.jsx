@@ -1,6 +1,6 @@
 import { CheckoutFlow } from "../../components/checkout/CheckoutFlow";
 
-export const metadata = { title: "Checkout — Suur Lemoen", robots: { index: false } };
+export const metadata = { title: "Checkout — Mismi", robots: { index: false } };
 
 export default function CheckoutPage() {
   return (

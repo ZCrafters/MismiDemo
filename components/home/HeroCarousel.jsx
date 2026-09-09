@@ -4,20 +4,20 @@ import { useEffect, useRef, useState } from "react";
 import { products } from "../../lib/products";
 import { ChevronLeftIcon, ChevronRightIcon } from "../ui/Icons";
 
-// Hero carousel (pola Sociolla, tema Glow Suur Lemoen): 3 slide auto-advance 6 dtk,
+// Hero carousel (pola Sociolla, tema Glow Mismi): 3 slide auto-advance 6 dtk,
 // pause saat hover; dot + panah; konten tetap terlihat tanpa JS (slide 1 statis
 // di SSR). Auto-advance & tilt nonaktif saat prefers-reduced-motion.
 
 const SLIDES = [
   {
-    kicker: "MINUMAN SEHAT ALAMI · OFFICIAL SUUR LEMOEN",
-    title: "Segar & sehat, tiap hari.",
-    text: "Sari lemon, cuka apel & madu murni — rutinitas sehat yang mudah dijalani kapan pun.",
+    kicker: "TAS WANITA KOREAN-STYLE · OFFICIAL MISMI",
+    title: "Cantik, ringan, buat tiap hari.",
+    text: "Tas selempang, ransel & tote bag dengan desain manis — dari commute sampai hangout.",
     cta: "Belanja Sekarang",
     href: "/catalog",
     // Satu produk representatif per kategori (bukan 3 varian sama) supaya foto match copy-nya.
     pick: (ps) => {
-      const cats = ["sari-lemon", "cuka-apel", "madu"];
+      const cats = ["tas-selempang", "tas-ransel", "tote-bag"];
       const list = cats
         .map((c) => ps.find((p) => p.category === c && p.heroFlag) || ps.find((p) => p.category === c))
         .filter(Boolean);
@@ -25,24 +25,24 @@ const SLIDES = [
     },
   },
   {
-    kicker: "DETOKS ALAMI",
-    title: "Detox dari dalam, dengan lemon.",
-    text: "Sari lemon, cuka buah & chia seeds — pendamping pola hidup sehat yang menyegarkan.",
-    cta: "Lihat Rutinitas Detox",
-    href: "/catalog?cat=cuka-apel",
+    kicker: "SLING BAG FAVORIT",
+    title: "Tas kecil, kepribadian besar.",
+    text: "Sling bag korduroi & water resistant — muat HP, ringan, cocok buat gaya harian.",
+    cta: "Lihat Sling Bag",
+    href: "/catalog?cat=tas-selempang",
     pick: (ps) => {
-      const list = ps.filter((p) => p.category === "cuka-apel" || p.category === "cuka-buah").slice(0, 3);
+      const list = ps.filter((p) => p.category === "tas-selempang").slice(0, 3);
       return list.length ? list : ps.filter((p) => p.heroFlag).slice(0, 3);
     },
   },
   {
-    kicker: "PAKET HEMAT",
-    title: "Stok sehat, sekali belanja.",
-    text: "Bundle favorit untuk rutinitas sehat di rumah — harga resmi official store.",
-    cta: "Lihat Paket Hemat",
-    href: "/catalog?cat=bundle",
+    kicker: "BACKPACK & TOTE",
+    title: "Sekolah, kerja, jalan-jalan.",
+    text: "Ransel & tote yang muat banyak tapi tetap stylish — harga resmi official store.",
+    cta: "Lihat Ransel & Tote",
+    href: "/catalog?cat=tas-ransel",
     pick: (ps) => {
-      const list = ps.filter((p) => p.category === "bundle").slice(0, 3);
+      const list = ps.filter((p) => p.category === "tas-ransel" || p.category === "tote-bag").slice(0, 3);
       return list.length ? list : ps.filter((p) => p.heroFlag).slice(0, 3);
     },
   },
@@ -127,4 +127,4 @@ export function HeroCarousel() {
       </div>
     </section>
   );
-}
+}

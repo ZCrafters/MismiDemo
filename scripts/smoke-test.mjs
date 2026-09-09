@@ -39,6 +39,9 @@ const MIME = {
 };
 const server = http.createServer((req, res) => {
   let p = decodeURIComponent(new URL(req.url, "http://x").pathname);
+  // Static export Next.js + trailingSlash: route = folder/index.html
+  const dir = path.join(OUT, p);
+  if (!p.endsWith("/") && fs.existsSync(dir) && fs.statSync(dir).isDirectory()) p += "/";
   if (p.endsWith("/")) p += "index.html";
   const file = path.join(OUT, p);
   if (fs.existsSync(file) && fs.statSync(file).isFile()) {

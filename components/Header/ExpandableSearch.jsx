@@ -4,8 +4,8 @@ import { useRouter } from "next/navigation";
 import { SearchIcon, CloseIcon, ClockIcon } from "../ui/Icons";
 import { products } from "../../lib/products";
 
-const KEY = "suurlemoen-search-v1";
-const HINTS = ["sari lemon", "cuka apel", "cuka nanas", "madu", "olive oil", "chia seeds", "teh kelor"];
+const KEY = "mismi-search-v1";
+const HINTS = ["tas selempang", "ransel", "tote bag", "korduroi", "water resistant", "motif bunga"];
 
 export function ExpandableSearch() {
   const [open, setOpen] = useState(false);
@@ -52,7 +52,7 @@ export function ExpandableSearch() {
                 type="search"
                 value={q}
                 onChange={(e) => setQ(e.target.value)}
-                placeholder="Cari: sari lemon, cuka apel, madu…"
+                placeholder="Cari: tas selempang, ransel, tote bag…"
                 aria-label="Cari produk"
                 autoComplete="off"
                 tabIndex={open ? 0 : -1}

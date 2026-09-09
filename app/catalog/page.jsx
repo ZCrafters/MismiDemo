@@ -1,7 +1,7 @@
 import CatalogClient from "./CatalogClient";
 import { Breadcrumb } from "../../components/ui/Chrome";
 
-export const metadata = { title: "Katalog — Suur Lemoen" };
+export const metadata = { title: "Katalog — Mismi" };
 
 // Server shell: renders breadcrumb + delegates to client component for filter/sort/pagination.
 // Required for static export because catalog uses searchParams (dynamic at runtime).

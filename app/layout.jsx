@@ -9,8 +9,8 @@ import { Header } from "../components/Header/Header";
 import { Footer } from "../components/Footer/Footer";
 
 export const metadata = {
-  title: "Suur Lemoen — Segar & Sehat, Minuman Lemon Indonesia",
-  description: "Sari lemon, cuka apel, madu & pangan alami berbasis lemon. Segar, alami, tiap hari. Demo — harga mengikuti official store."
+  title: "Mismi — Tas Wanita Cantik & Stylish Indonesia",
+  description: "Tas selempang, ransel & tote bag Korean-style. Cantik, ringan, buat tiap hari. Demo — harga mengikuti official store."
 };
 
 export default function RootLayout({ children }) {

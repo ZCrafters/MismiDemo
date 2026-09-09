@@ -5,11 +5,9 @@ import { Reveal } from "../motion/Reveal";
 import { Spotlight, SpotLightItem } from "../ui/Spotlight";
 
 const CATS = [
-  { slug: "sari-lemon", label: "Sari Lemon" },
-  { slug: "cuka-apel", label: "Cuka Apel" },
-  { slug: "madu", label: "Madu Murni" },
-  { slug: "minyak-zaitun", label: "Minyak Zaitun" },
-  { slug: "bundle", label: "Paket Hemat" },
+  { slug: "tas-selempang", label: "Tas Selempang" },
+  { slug: "tas-ransel", label: "Tas Ransel" },
+  { slug: "tote-bag", label: "Tote Bag" },
 ];
 
 export function CategoryGrid() {
@@ -44,4 +42,4 @@ export function NewArrivals({ items }) {
       </Reveal>
     </section>
   );
-}
+}

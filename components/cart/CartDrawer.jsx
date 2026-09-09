@@ -35,7 +35,7 @@ export function CartDrawer() {
               <svg width={44} height={44} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.6}><path d="M4 5h2l2.4 11h10.4l2-8H7.2" /></svg>
             </span>
             <strong>Keranjang masih kosong.</strong>
-            <p style={{ color: "var(--color-muted)", fontSize: 14 }}>Temukan minuman sehat favoritmu di katalog Suur Lemoen.</p>
+            <p style={{ color: "var(--color-muted)", fontSize: 14 }}>Temukan tas cantik favoritmu di katalog Mismi.</p>
             <a className="btn" href="/catalog" onClick={() => setOpen(false)}>Mulai Belanja →</a>
           </div>
         ) : (

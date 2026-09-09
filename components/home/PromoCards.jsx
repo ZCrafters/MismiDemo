@@ -1,16 +1,16 @@
 import clsx from "clsx";
 import { Spotlight, SpotLightItem } from "../ui/Spotlight";
 
-// Kartu promo horizontal (pola "Special Promo" Sociolla, tema Glow Suur Lemoen).
+// Kartu promo horizontal (pola "Special Promo" Sociolla, tema Glow Mismi).
 // Server component — hanya link + salinan generik yang sesuai disclaimer demo
 // (tidak mengarang angka diskon; harga promo nyata ada di katalog/PDP).
 
 const PROMOS = [
   { t: "Harga promo official store", d: "Listing resmi marketplace, s&k berlaku", href: "/catalog?sort=price-asc", tone: "pink" },
-  { t: "Paket sehat hemat", d: "Bundle minuman & superfood lengkap", href: "/catalog?cat=bundle", tone: "blue" },
-  { t: "Terlaris minggu ini", d: "Paling banyak diborong keluarga sehat", href: "/catalog?sort=sold", tone: "sand" },
-  { t: "New launch segar", d: "Teh herbal & camilan sehat terbaru Suur Lemoen", href: "/catalog?sort=new", tone: "pink" },
-  { t: "Cuka apel & buah andalan", d: "Rutinitas detox yang menyegarkan", href: "/catalog?cat=cuka-apel", tone: "blue" },
+  { t: "Sling bag favorit", d: "Korean style, korduroi & water resistant", href: "/catalog?cat=tas-selempang", tone: "blue" },
+  { t: "Terlaris minggu ini", d: "Paling banyak diborong pecinta tas", href: "/catalog?sort=sold", tone: "sand" },
+  { t: "New launch", d: "Model terbaru Mismi", href: "/catalog?sort=new", tone: "pink" },
+  { t: "Ransel & tote andalan", d: "Untuk sekolah, kerja & jalan-jalan", href: "/catalog?cat=tas-ransel", tone: "blue" },
   { t: "Info & promo rutin", d: "Daftar newsletter di halaman bawah", href: "/about", tone: "sand" },
 ];
 
@@ -59,4 +59,4 @@ export function PromoCards() {
       </div>
     </section>
   );
-}
+}

@@ -13,7 +13,7 @@ export function generateStaticParams() {
 export function generateMetadata({ params }) {
   const p = getProduct(params.slug);
   return {
-    title: p ? `${p.name} — Suur Lemoen` : "Produk tidak ditemukan — Suur Lemoen",
+    title: p ? `${p.name} — Mismi` : "Produk tidak ditemukan — Mismi",
     robots: { index: false },
   };
 }
@@ -32,7 +32,7 @@ export default function ProductDetail({ params }) {
       <RelatedCarousel items={getRelated(p)} category={p.category} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
         "@context": "https://schema.org", "@type": "Product", name: p.name,
-        sku: p.slug, brand: { "@type": "Brand", name: "Suur Lemoen" },
+        sku: p.slug, brand: { "@type": "Brand", name: "Mismi" },
         aggregateRating: { "@type": "AggregateRating", ratingValue: p.rating, reviewCount: p.reviews },
         offers: { "@type": "Offer", priceCurrency: "IDR", price: p.price, availability: "https://schema.org/InStock" }
       }) }} />

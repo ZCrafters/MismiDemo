@@ -70,7 +70,7 @@ export default function CatalogClient() {
           {sizes.map((s) => <input key={s} type="hidden" name="size" value={s} />)}
           <input type="hidden" name="sort" value={sort} />
           <input id="catalog-search" name="q" type="search" defaultValue={q}
-            placeholder="Cari: serum, scrub, toner…" aria-label="Cari produk" />
+            placeholder="Cari: tas selempang, ransel, tote bag…" aria-label="Cari produk" />
         </form>
         <div className="plp-bar">
           <FilterBottomSheet current={current} count={activeFilters} />

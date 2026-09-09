@@ -100,7 +100,7 @@ export function BuyBox({ p }) {
 
       <p className="meta" style={{ display: "flex", gap: 16, marginTop: 14 }}>
         <span style={{ display: "inline-flex", gap: 6, alignItems: "center" }}><TruckIcon size={18} /> Kirim official store</span>
-        <span style={{ display: "inline-flex", gap: 6, alignItems: "center" }}><ShieldIcon size={18} /> Produk BPOM &amp; Halal</span>
+        <span style={{ display: "inline-flex", gap: 6, alignItems: "center" }}><ShieldIcon size={18} /> Produk original &amp; terjamin</span>
       </p>
 
       <ShareButtons slug={p.slug} name={p.name} />
@@ -111,18 +111,18 @@ export function BuyBox({ p }) {
 
       {p.claim && (
         <details className="acc" open>
-          <summary>Kandungan &amp; Manfaat</summary>
+          <summary>Detail Produk</summary>
           <div className="acc-body">{p.claim}</div>
         </details>
       )}
 
       <details className="acc">
-        <summary>Cara Pakai</summary>
-        <div className="acc-body">Konsumsi sesuai petunjuk pada kemasan produk. Untuk produk asam (cuka/sari), encerkan dengan air sebelum diminum. Konsultasikan ke dokter bila memiliki kondisi kesehatan khusus, ibu hamil/menyusui, atau sedang dalam pengobatan.</div>
+        <summary>Cara Merawat</summary>
+        <div className="acc-body">Bersihkan dengan kain lembut &amp; kering, hindari merendam berlebih (kecuali produk water resistant), dan jemur di tempat teduh. Simpan di tempat kering saat tidak dipakai.</div>
       </details>
       <details className="acc">
         <summary>Info Pengiriman</summary>
-        <div className="acc-body">Order final dilakukan di official store Suur Lemoen (Tokopedia / Shopee / Lazada / TikTok). Demo ini hanya simulasi — harga &amp; stok dapat berubah.</div>
+        <div className="acc-body">Order final dilakukan di official store Mismi (Tokopedia / Shopee / Lazada / TikTok). Demo ini hanya simulasi — harga &amp; stok dapat berubah.</div>
       </details>
     </div>
   );

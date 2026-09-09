@@ -16,7 +16,7 @@ const COLS = [
     ],
   },
   {
-    title: "Tentang Suur Lemoen",
+    title: "Tentang Mismi",
     links: [
       { label: "Brand kami", href: "/about" },
       { label: "Wishlist", href: "/wishlist" },
@@ -27,25 +27,25 @@ const COLS = [
     title: "Official Store",
     blank: true,
     links: [
-      { label: "Tokopedia", href: "https://www.tokopedia.com/suurlemoenid" },
-      { label: "Shopee", href: "https://shopee.co.id/suurlemoen.id" },
-      { label: "Lazada", href: "https://www.lazada.co.id/shop/suur-lemoen-id" },
-      { label: "TikTok Shop", href: "https://www.tiktok.com/@suurlemoenofficial" },
+      { label: "Tokopedia", href: "https://www.tokopedia.com/mismiofficial" },
+      { label: "Shopee", href: "https://shopee.co.id/mismi.official" },
+      { label: "Lazada", href: "https://www.lazada.co.id/shop/mismi-bags" },
+      { label: "TikTok Shop", href: "https://www.tiktok.com/@mismi.id" },
     ],
   },
   {
     title: "Sosial Media",
     blank: true,
     links: [
-      { label: "Instagram", href: "https://www.instagram.com/suurlemoen.official" },
-      { label: "TikTok", href: "https://www.tiktok.com/@suurlemoenofficial" },
+      { label: "Instagram", href: "https://www.instagram.com/mismi.official" },
+      { label: "TikTok", href: "https://www.tiktok.com/@mismi.id" },
     ],
   },
 ];
 
 // Footer panel ala ui-layouts `hover-footer` (MIT), diadaptasi ke tema Glow:
 // pita + newsletter pil + kolom link + wordmark raksasa bergradien
-// mengikuti kursor + chip pembayaran. Logika newsletter tetap milik Suur Lemoen.
+// mengikuti kursor + chip pembayaran. Logika newsletter tetap milik Mismi.
 export function Footer() {
   const [email, setEmail] = useState("");
   const [done, setDone] = useState(false);
@@ -64,8 +64,8 @@ export function Footer() {
       <div className="foot-panel">
         <div className="foot-band">
           <div className="foot-band-brand">
-            <p className="foot-wordmark" aria-label="Suur Lemoen">suur lemoen<span>.</span></p>
-            <p className="foot-tagline">Minuman sehat &amp; pangan alami berbasis lemon Indonesia — segar, alami, tiap hari.</p>
+            <p className="foot-wordmark" aria-label="Mismi">mismi<span>.</span></p>
+            <p className="foot-tagline">Tas wanita cantik &amp; stylish ala Korea — untuk crush, perjalanan &amp; hari-hari lucu.</p>
           </div>
           <div className="foot-news">
             <p className="foot-news-title">Dapatkan info &amp; promo</p>
@@ -105,9 +105,9 @@ export function Footer() {
           ))}
         </nav>
 
-        <AnimatedText text="suur lemoen" className="foot-giant" />
+        <AnimatedText text="mismi" className="foot-giant" />
 
-        <div className="foot-bottom">© 2026 Suur Lemoen demo · Harga &amp; stok mengikuti official store · #SehatDenganLemon</div>
+        <div className="foot-bottom">© 2026 Mismi demo · Harga &amp; stok mengikuti official store · #MoveEasyBeMismi</div>
       </div>
     </footer>
   );

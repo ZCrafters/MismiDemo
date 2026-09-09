@@ -7,7 +7,7 @@ import {
 } from "../ui/Icons";
 
 // Drawer navigasi mobile ala menu ikon Sociolla (tanpa pilihan negara/login,
-// disesuaikan katalog Suur Lemoen): search ringkas + grup Kategori, Promo &
+// disesuaikan katalog Mismi): search ringkas + grup Kategori, Promo &
 // Kupon, Best Seller & Terbaru, Wishlist & Bantuan.
 const QUICK = [
   { href: "/catalog?sale=1", icon: TagIcon, title: "Promo", desc: "Diskon & harga spesial" },
@@ -19,7 +19,7 @@ const QUICK = [
 const HELP = [
   { href: "/wishlist", icon: HeartIcon, title: "Wishlist", desc: "Produk yang kamu simpan" },
   { href: "/faq", icon: ShieldIcon, title: "FAQ & Bantuan", desc: "Jawaban cepat" },
-  { href: "/about", icon: GridIcon, title: "Tentang Suur Lemoen", desc: "Kenalan dengan brand" },
+  { href: "/about", icon: GridIcon, title: "Tentang Mismi", desc: "Kenalan dengan brand" },
 ];
 
 function MenuRow({ href, icon: Ic, title, desc, onClose }) {
@@ -48,7 +48,7 @@ export function MobileNav() {
         <div className="search-scrim" onClick={close} />
         <div className="mobile-panel" role="dialog" aria-label="Menu navigasi">
           <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-            <strong>suur lemoen.</strong>
+            <strong>mismi.</strong>
             <button className="icon-btn" aria-label="Tutup menu" onClick={close}>
               <CloseIcon />
             </button>
@@ -56,7 +56,7 @@ export function MobileNav() {
 
           <form className="mnav-search" action="/catalog" method="get" role="search" onSubmit={close}>
             <SearchIcon size={18} aria-hidden="true" />
-            <input type="search" name="q" placeholder="Cari: sari lemon, cuka apel, madu…" aria-label="Cari produk" autoComplete="off" />
+            <input type="search" name="q" placeholder="Cari: tas selempang, ransel, tote bag…" aria-label="Cari produk" autoComplete="off" />
           </form>
 
           <p className="mnav-label">Belanja</p>
@@ -77,9 +77,9 @@ export function MobileNav() {
           <div className="mobile-panel-footer">
             <p className="mnav-stores">
               Official store:{" "}
-              <a href="https://www.tokopedia.com/suurlemoenid" target="_blank" rel="noreferrer" onClick={close}>Tokopedia</a>
+              <a href="https://shopee.co.id/mismi.official" target="_blank" rel="noreferrer" onClick={close}>Shopee</a>
               {" · "}
-              <a href="https://shopee.co.id/suurlemoen.id" target="_blank" rel="noreferrer" onClick={close}>Shopee</a>
+              <a href="https://www.tokopedia.com/mismiofficial" target="_blank" rel="noreferrer" onClick={close}>Tokopedia</a>
             </p>
           </div>
         </div>

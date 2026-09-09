@@ -3,7 +3,7 @@ import { createContext, useContext, useEffect, useMemo, useState } from "react";
 import { getProduct } from "../../lib/products";
 
 const CartCtx = createContext(null);
-const KEY = "suurlemoen-cart-v1";
+const KEY = "mismi-cart-v1";
 
 function load() {
   try {
