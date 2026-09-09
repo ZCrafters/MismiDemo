@@ -7,18 +7,13 @@ import { CartBadge } from "./CartBadge";
 import { MobileNav } from "./MobileNav";
 import { CountdownBar } from "../ui/CountdownBar";
 
-// Header ala Sociolla (diadaptasi ke tema Glow Suur Lemoen): strip demo + strip
+// Header ala Sociolla (diadaptasi ke tema Glow Mismi): strip demo + strip
 // promo + countdown (statis, ikut scroll) lalu bar navigasi sticky berisi
 // wordmark, search lebar (desktop), wishlist, keranjang, dan pill kategori.
 const SHORT_LABEL = {
-  "sari-lemon": "Sari Lemon",
-  "cuka-apel": "Cuka Apel",
-  "cuka-buah": "Cuka Buah",
-  "madu": "Madu",
-  "minyak-zaitun": "Minyak Zaitun",
-  "superfood": "Superfood",
-  "teh-herbal": "Teh Herbal",
-  "bundle": "Paket Hemat",
+  "tas-ransel": "Tas Ransel",
+  "tote-bag": "Tote Bag",
+  "tas-selempang": "Tas Selempang",
 };
 
 function WishlistButton() {
@@ -34,7 +29,7 @@ function WishlistButton() {
 export function Header() {
   return (
     <>
-      <div className="top-strip">Demo edukasi — harga provisional, mengikuti official store Suur Lemoen.</div>
+      <div className="top-strip">Demo edukasi — harga provisional, mengikuti official store Mismi.</div>
       <a className="promo-strip" href="/catalog?sale=1">
         <span><strong>Harga promo official store</strong> · s&amp;k berlaku</span>
         <span className="promo-strip-cta">Belanja Promo →</span>
@@ -43,10 +38,10 @@ export function Header() {
       <header className="site-header">
         <nav className="nav" aria-label="Navigasi utama">
           <MobileNav />
-          <a href="/" className="wordmark" aria-label="Suur Lemoen, beranda">suur lemoen<span>.</span></a>
+          <a href="/" className="wordmark" aria-label="Mismi, beranda">mismi<span>.</span></a>
           <form className="head-search" action="/catalog" method="get" role="search">
             <SearchIcon size={18} aria-hidden="true" />
-            <input name="q" type="search" placeholder="Cari: sari lemon, cuka apel, madu…" aria-label="Cari produk" autoComplete="off" />
+            <input name="q" type="search" placeholder="Cari: tas selempang, tote bag, ransel…" aria-label="Cari produk" autoComplete="off" />
           </form>
           <div className="nav-right">
             <span className="mobile-search"><ExpandableSearch /></span>

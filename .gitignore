@@ -1,6 +1,7 @@
 node_modules/
-out/
 .next/
-*.xlsx
+out/
 .env*
+*.xlsx
+*.h2d
 dist/

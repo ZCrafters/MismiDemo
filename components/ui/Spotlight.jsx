@@ -72,7 +72,7 @@ export function SpotLightItem({ children, className }) {
         <div
           className="pointer-events-none absolute z-10 h-full w-full rounded-card opacity-0 transition duration-300 group-hover:opacity-100"
           style={{
-            background: `radial-gradient(250px circle at ${overlayColor.x}px ${overlayColor.y}px, rgba(242, 193, 27, 0.16), transparent 80%)`,
+            background: `radial-gradient(250px circle at ${overlayColor.x}px ${overlayColor.y}px, rgba(214, 19, 128, 0.16), transparent 80%)`,
           }}
         />
       )}
@@ -80,7 +80,7 @@ export function SpotLightItem({ children, className }) {
         <div
           className="pointer-events-none absolute inset-0 z-10 rounded-card bg-fixed opacity-0 group-hover:opacity-100"
           style={{
-            background: `radial-gradient(circle at ${mousePosition.x}px ${mousePosition.y}px, rgba(242, 193, 27, 0.2) 0%, transparent 22%, transparent) fixed`,
+            background: `radial-gradient(circle at ${mousePosition.x}px ${mousePosition.y}px, rgba(214, 19, 128, 0.2) 0%, transparent 22%, transparent) fixed`,
           }}
         />
       )}
@@ -88,7 +88,7 @@ export function SpotLightItem({ children, className }) {
         <div
           className="pointer-events-none absolute inset-0 z-0 rounded-card bg-fixed"
           style={{
-            background: `radial-gradient(circle at ${mousePosition.x}px ${mousePosition.y}px, rgba(242, 193, 27, 0.12) 0%, transparent 22%, transparent) fixed`,
+            background: `radial-gradient(circle at ${mousePosition.x}px ${mousePosition.y}px, rgba(214, 19, 128, 0.12) 0%, transparent 22%, transparent) fixed`,
           }}
         />
       )}

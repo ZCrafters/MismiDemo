@@ -2,9 +2,9 @@ import { Rating } from "../ui/ProductCard";
 import { StarIcon } from "../ui/Icons";
 
 const DUMMY_REVIEWS = [
-  { name: "Ayu K.", initial: "A", color: "#92610a", days: 12, title: "Segar, cocok buat rutinitas pagi", body: "Sudah langganan sari lemon & cuka apel. Diencerin air hangat tiap pagi, rasanya segar dan gak bikin perih. Kemasan rapi, kirim cepat.", verified: true },
-  { name: "Dinda M.", initial: "D", color: "#47730d", days: 27, title: "Madu & cuka nanas juara", body: "Madu multiflora-nya manis alami, cuka nanas aromanya lembut gak nyengat. Cocok buat yang baru mulai rutinitas sehat.", verified: true },
-  { name: "Rani P.", initial: "R", color: "#26331a", days: 41, title: "Teh herbal & olive oil andalan", body: "Teh rimpangnya hangat dan wangi rempah. Olive oil-nya murni, enak buat salad. Harga promo masuk akal.", verified: false },
+  { name: "Ayu K.", initial: "A", color: "#a6125c", days: 12, title: "Sling bag-nya lucu banget", body: "Mismi Hazel kesayangan banget. Bahan tahan air, muat banyak, warna pink-nya soft dan cocok buat outfit harian. Kirim cepat, packing rapi.", verified: true },
+  { name: "Dinda M.", initial: "D", color: "#b4135e", days: 27, title: "Tote bag korduroi juara", body: "Hills Tote motif beruangnya gemas, bahannya tebal dan jahitannya rapi. Buat kuliah dan jalan-jalan, pas. Harga promo-nya juga masuk akal.", verified: true },
+  { name: "Rani P.", initial: "R", color: "#3a1230", days: 41, title: "Ransel korea style andalan", body: "Mismi Jasmine bener-bener korean look. Muat laptop dan buku, tali bahunya nyaman. Sering ditanya-tanya temen karena desainnya beda.", verified: false },
 ];
 
 export function ReviewSection({ product }) {

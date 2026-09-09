@@ -1,21 +1,21 @@
 /** @type {import('tailwindcss').Config} */
 // Utility layer di atas globals.css yang sudah ada (preflight OFF agar tidak merusak CSS lama).
 const tokens = {
-  bg: "#fdf9e9",
+  bg: "#fff5f9",
   surface: "#ffffff",
-  ink: "#26331a",
-  muted: "#5c6f45",
-  line: "#e5e7c6",
-  primary: "#47730d",
-  accent: "#f2c11b",
-  "accent-dark": "#92610a",
-  badge: "#c2410c",
-  star: "#b45309",
-  success: "#166534",
-  danger: "#c2410c",
-  "glow-1": "#f8efcd",
-  "glow-2": "#fcf6e2",
-  "glow-3": "#fefaf0",
+  ink: "#3a1230",
+  muted: "#7d3d68",
+  line: "#f3d4e4",
+  primary: "#b4135e",
+  accent: "#d61380",
+  "accent-dark": "#a6125c",
+  badge: "#c2156e",
+  star: "#d97706",
+  success: "#15803d",
+  danger: "#d6147a",
+  "glow-1": "#ffe6f0",
+  "glow-2": "#fff0f6",
+  "glow-3": "#fff7fb",
 };
 
 module.exports = {
@@ -34,8 +34,8 @@ module.exports = {
       maxWidth: { wrap: "1400px" },
       borderRadius: { card: "14px" },
       boxShadow: {
-        card: "0 10px 30px -12px rgba(76, 82, 38, 0.16)",
-        glow: "0 22px 44px -18px rgba(122, 98, 10, 0.35)",
+        card: "0 10px 30px -12px rgba(180, 19, 94, 0.14)",
+        glow: "0 22px 44px -18px rgba(214, 19, 128, 0.28)",
       },
       keyframes: {
         "float-soft": {
